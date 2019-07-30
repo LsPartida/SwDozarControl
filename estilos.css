@@ -7,9 +7,16 @@
     min-height:100vh;
     align-content: center;
 }
-.container{
-    background:#003333;
+.opacidad{
+    background: rgba(0,0,0,0.2);
 }
 body{
-    background: #226666;
+    background: whitesmoke;
+}
+@media (min-width: 768px) {
+.login{
+    -webkit-box-shadow: -10px 0px 10px 0px rgba(0,0,0,0.18);
+    -moz-box-shadow: -10px 0px 10px 0px rgba(0,0,0,0.18);
+    box-shadow: -10px 0px 10px 0px rgba(0,0,0,0.18);
+}
 }
