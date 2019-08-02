@@ -1,0 +1,22 @@
+.login{
+    -webkit-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.18);
+    -moz-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.18);
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.18);
+}
+.todo{
+    min-height:100vh;
+    align-content: center;
+}
+.opacidad{
+    background: rgba(0,0,0,0.2);
+}
+body{
+    background: whitesmoke;
+}
+@media (min-width: 768px) {
+.login{
+    -webkit-box-shadow: -10px 0px 10px 0px rgba(0,0,0,0.18);
+    -moz-box-shadow: -10px 0px 10px 0px rgba(0,0,0,0.18);
+    box-shadow: -10px 0px 10px 0px rgba(0,0,0,0.18);
+}
+}
