@@ -45,3 +45,9 @@ body {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
+  /*comienza grid del menu*/
+  .contenedor
+  {
+    display: grid;
+    grid-template: 
+  }
