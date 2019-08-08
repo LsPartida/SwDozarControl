@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="es">
   <head>
@@ -11,20 +10,29 @@
     <link rel="stylesheet" href="estilosnigas.css">
     <title>SwDozar</title>
   </head>
+  <?php
+  session_start();
+  
+  if (isset($_SESSION['usuario']))
+  {
+    header("location:menu.php");
+    die();
+  }
+  ?>
   <body>
-    <form class="form-signin">
+    <form class="form-signin" action="iniciar.php" method="POST">
   		<img class="mb-4" src="imgs/dozar logo.png" alt="" width="100" height="100" margin>
   		<h1 class="h3 mb-3 font-weight-normal">Por favor inicia sesión</h1>
   		<label for="inputEmail" class="sr-only">Correo Electronico</label>
-  		<input type="text" id="inputUN" class="form-control" placeholder="Nombre de usuario" required autofocus>
+  		<input type="text" id="inputUN" class="form-control" placeholder="Nombre de usuario" required autofocus name="usuario">
   		<label for="inputPassword" class="sr-only">Contraseña</label>
-  		<input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+  		<input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required name="pass">
   		<div class="checkbox mb-3">
     		<label>
       			<input type="checkbox" value="remember-me"> Recordarme
     		</label>
   		</div>
-  		<button onclick="location.href='./menu.php'" class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesión</button>
+  		<button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesión</button>
   		<p class="mt-5 mb-3 text-muted">SWDozar Soluciones ERP</p>
 	</form>
     <!-- Optional JavaScript -->

@@ -8,10 +8,26 @@ $activePage="menu.php";
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="estilosnigas.css">
-	<title>SWDozar</title>
+    <title>SWDozar</title>
 </head>
 <body>
-    <?php include "nav.php"?>
+<?php include "nav.php";
+?>
+<?php
+if($varsession == null || $varsession='')
+{?>
+      <div class="container">
+        <div class="row">
+            <div class="col-12 bg-secondary">
+                <h2>Usted no ha iniciado sesión</h2>
+            </div>
+        </div>
+      </div>
+    </body>
+<?php
+die();
+}
+?>
     <div class="container">
         <div class="row">
             <div class="col mb-4 shadow-sm">
