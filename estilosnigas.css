@@ -1,6 +1,12 @@
+@import 'https://fonts.googleapis.com/css?family=Nunito';
+
+* {
+  font-family: sans-serif;
+}
+  
   img{
   display:block;
-  margin:auto;
+  /*margin:auto;*/
   }
   
   .form-signin {
@@ -32,3 +38,188 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
+/**************************************************************************************************/
+/********************************Estilosnigas para el formulario***********************************/
+/**************************************************************************************************/
+form#form1 {
+  width: 21em;
+  height: 36em;
+  margin: 2em auto;
+  outline: none;
+  padding: 0em;
+  display: block;
+  position: relative;
+  background: rgba(62, 186, 235, 0.089);
+  border-radius: 15px;
+  z-index: 0;
+}
+form#form2 {
+  width: 50em;
+  height: 36em;
+  margin: 2em auto;
+  outline: none;
+  padding: 0em;
+  display: block;
+  position: relative;
+  background: rgba(62, 186, 235, 0.089);
+  border-radius: 15px;
+  z-index: 0;
+}
+
+form#form1 fieldset {
+  margin: 0em;
+  border: none;
+  outline: none;
+  padding: 0.5em 0.5em;
+}
+form#form2 fieldset {
+  margin: 0em;
+  border: none;
+  outline: none;
+  padding: 0.5em 0.5em;
+}
+
+label {
+  font-size: 0.8em;
+  font-family: 'Arial', sans-serif;
+  display: block;
+}
+
+form#form1 label[for="Inleft"], label[for="Inright"] {
+  width: 11em;
+  display: inline-block;
+}
+
+form#form2 label[for="Inleft"], label[for="Inright"] {
+  width: 11em;
+  display: inline-block;
+}
+
+form#form1 label[for="notifications"] {
+  color
+  width: 5em;
+  display: inline-block;
+  font-family: 'Arial', sans-serif;
+}
+
+form#form2 label[for="notifications"] {
+  color
+  width: 5em;
+  display: inline-block;
+  font-family: 'Arial', sans-serif;
+}
+
+h2 {
+  font-family: 'Nunito', sans-serif;
+}
+
+form#form1 h6#successMsg {
+  color: #0C4;
+  float: left;
+  display: none;
+  margin: 1.65em 0em 0em 6em;
+  font-size: 1em;
+  font-family: sans-serif;
+}
+
+input {
+  height: 2em;
+  width: 20em;
+  margin: 0.2em 0.7em 0.2em 0.7em;
+  padding: 0em 0.5em;
+  outline: none;
+  border: 1px solid #AAA;
+  border-radius: 5px;
+}
+
+form#form1 input[type="text"] {
+  height: 2em;
+  width: 10em;
+  margin: 0.2em 0.7em 0.5em 0.7em;
+  outline: none;
+  border: 1px solid #AAA;
+  border-radius: 5px;
+}
+
+.opciones{
+  height: 2em;
+  width: 7em;
+  margin: 0.2em 0.7em 0.5em 0.7em;
+  outline: none;
+  border: 1px solid #AAA;
+  border-radius: 5px;
+}
+
+.opcionesG{
+  height: 2em;
+  width: 12em;
+  margin: 0.2em 0.7em 0.5em 0.7em;
+  outline: none;
+  border: 1px solid #AAA;
+  border-radius: 5px;
+}
+
+form#form1 input[type="Entrada_T"] {
+  width: 18em;
+}
+
+form#form2 input[type="Entrada_F2"] {
+  width: 46em;
+}
+
+form#form1 input[type="checkbox"] {
+  width: 1em;
+  height: 1em;
+}
+
+input.required {
+  border-left: 5px solid rgb(0, 119, 255);
+}
+
+.animate {
+	transition: all 0.1s;
+ -webkit-transition: all 0.1s;
+}
+
+.action-button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+	position: relative;
+	padding: 10px 15px;
+  margin: 5px 5px 5px 5px;
+  float: left;
+	border-radius: 5px;
+	font-family: helvetica, arial;
+	font-size: 15px;
+	color: #FFF;
+	text-decoration: none;	
+}
+
+.action-button:active {
+	transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
+
+.blue {
+  float: right;
+  margin: 1em 0.5em;
+	background-color: #3498DB;
+	border-bottom: 3px solid #2980B9;
+	text-shadow: 0px .06em #2980B9;
+}
+
+.red {
+  margin: 1em 0.5em;
+	background-color: #E74C3C;
+	border-bottom: 3px solid #BD3E31;
+	text-shadow: 0px .06em #BD3E31;
+}
+
+.grey {
+  margin: 1em 0.5em;
+  background-color:#ccc;
+  border-bottom: 3px solid #a3a3a3;
+  text-shadow:0px .06em #8D8B8B;
+}
