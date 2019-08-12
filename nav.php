@@ -4,16 +4,18 @@ $varsession=$_SESSION['usuario'];
 $pages = array();
 $pages["menu.php"] = "Menu";
 $pages["pendientes.php"] = "Pendientes";
-$pages["Configuracion.php"] = "Configuración";
+// $pages["Configuracion.php"] = "Configuración";
+$pages["gestcuentas.php"] = "Gestionar Correos";
+$pages["pruebas.php"] = "Gestionar Correos";
 $activePage;
-
-?>
-<style>
-  nav{
-    margin-bottom:2em;
+if (!isset($_SESSION['usuario']))
+  {
+    header("location:index.php");
+    die();
   }
-</style>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+?>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-barra">
   <a class="navbar-brand" href="menu.php">
     <img src="./imgs/dozar logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
     SwDozar
