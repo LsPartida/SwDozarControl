@@ -11,16 +11,17 @@
     <title>SwDozar</title>
   </head>
   <?php
-  session_start();
   
-  if (isset($_SESSION['usuario']))
+  session_start();
+    if (isset($_SESSION['usuario']))
   {
-    header("location:menu.php");
+    header("location:Vistas\menu.php");
     die();
   }
+  //Si no hay usuarios, crear admin admin y montar info de modulos
   ?>
   <body>
-    <form class="form-signin" action="iniciar.php" method="POST">
+    <form class="form-signin" action="Controlador\iniciar.php" method="POST">
   		<img class="mb-4" src="imgs/dozar logo.png" alt="" width="100" height="100" margin>
   		<h1 class="h3 mb-3 font-weight-normal">Por favor inicia sesión</h1>
   		<label for="inputEmail" class="sr-only">Correo Electronico</label>
