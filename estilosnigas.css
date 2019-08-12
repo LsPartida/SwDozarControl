@@ -8,7 +8,12 @@
   display:block;
   /*margin:auto;*/
   }
-  
+  .imglink a img{
+    width:120px;
+  }
+  .bg-barra{
+    background: rgb(62, 186, 235);
+  }
   .form-signin {
     width: 100%;
     max-width: 330px;
@@ -223,3 +228,24 @@ input.required {
   border-bottom: 3px solid #a3a3a3;
   text-shadow:0px .06em #8D8B8B;
 }
+
+  .navlogo{
+    height: 5px;
+  }
+  .columna{
+    height: 70vh;
+  }
+  .example-modal .modal {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    left: auto;
+    display: block;
+    z-index: 1;
+  }
+
+  .example-modal .modal {
+    background: transparent !important;
+  }
+

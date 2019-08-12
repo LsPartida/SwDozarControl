@@ -11,31 +11,42 @@ $activePage="pendientes.php";
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
-      .columna{
-        height: 80vh;
+      
       }
     </style>
     <title>Pendientes</title>
   </head>
   <body>
-   <?php include "nav.php"?>
-   <div class="container">
+   <?php include "nav.php";?>
+   <div class="container" style="margin-top:2em;"> 
       <div class="row">
-      <div class="col-4">
+      <div class="col-12 col-md-4">
         <h3>
           Pendientes globales
+          <!-- <?php
+          //   <div class="card" style="width: 18rem;">
+          //   <div class="card-body">
+          //     <h5 class="card-title">Card title</h5>
+          //     <p class="card-text"></p>
+          //     <a href="#" class="btn btn-primary">Go somewhere</a>
+          //   </div>
+          // </div>
+          ?> -->
         </h3>
         <div class="container-fluid d-flex flex-column overflow-auto columna shadow ">
+        <!-- Agregar botón -->
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-12 col-md-4">
           <h3>Prioridad Alta</h3>
           <div class="container-fluid d-flex flex-column overflow-auto columna shadow">
+          <!-- Agregar botón -->
           </div>
       </div>
-      <div class="col-4">
+      <div class="col-12 col-md-4">
           <h3>Prioridad Normal</h3>
           <div class="container-fluid d-flex flex-column overflow-auto columna shadow">
+          <!-- Agregar botón -->
           </div>
       </div>  
     </div>
