@@ -14,7 +14,7 @@
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-mb-4 shadow">
+                <div class="col-mb-2 shadow">
                     <form id="form1">
                         <fieldset>
                             <h2>Nuevo Ticket</h2>

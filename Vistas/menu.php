@@ -12,27 +12,15 @@ $activePage="menu.php";
     <title>SWDozar</title>
 </head>
 <body>
-<?php include "plantilla.php";
+<?php 
+include "plantilla.php";
 ?>
     <div class="container" style="margin-top:2em;">
     <!-- Cambia en base a los derechos -->
-        <div class="row">
-            <div class="col-12 col-md-4 shadow-sm imglink">
-                <a href="configuracion.php">
-                    <img class="imglink" src="./imgs/btnConfiguracion.png" alt="">
-                </a>
-            </div>
-            <div class="col-12 col-md-4 shadow-sm imglink">
-            <a href="reportes.php">
-                    <img class="imglink" src="./imgs/btnreportes.png" alt="">
-                </a>
-            </div>
-            <div class="col-12 col-md-4 shadow-sm imglink">
-            <a href="pendientes.php">
-                    <img class="imglink" src="./imgs/btnPendientes.png" alt="">
-                </a>
-            </div>
-        </div>
+    <div class="row">
+        <?php include "..\Controlador\getMenus.php"; ?>
+    </div>
+        
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

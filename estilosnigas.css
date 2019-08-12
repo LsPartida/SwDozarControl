@@ -8,6 +8,10 @@
   display:block;
   /*margin:auto;*/
   }
+  .imglink img{
+    width:120px;
+    height: 120px;
+  }
   .imglink a img{
     width:120px;
   }
@@ -233,7 +237,7 @@ input.required {
     height: 5px;
   }
   .columna{
-    height: 70vh;
+    height: 70vh ;
   }
   .example-modal .modal {
     position: relative;
@@ -249,3 +253,8 @@ input.required {
     background: transparent !important;
   }
 
+.cambiar:hover{
+  background: rgba(12, 64, 85, 0.95);
+  color:white;
+  
+}

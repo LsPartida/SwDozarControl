@@ -1,21 +1,23 @@
 <?php
-class DB
+session_start();
+class Conector
 {
     public $user='root';
     public $dbpass='1qazxsw2.-';
-    public $dbname='SWDConntrol';
+    public $dbname='SWDControl';
     public $conn;
     public $result;
-    public function Connnect()
+    public function Connect()
     {
         try {
-            $dsn = "mysql:dbname=".$dbname."; host=localhost";
+
+            $dsn = "mysql:dbname=".$this->dbname."; host=localhost";
             $options  = array(PDO::ATTR_ERRMODE =>      PDO::ERRMODE_EXCEPTION,
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
             );
 
 
-            $this->conn = new PDO($dsn, $user, $password, $options);
+            $this->conn = new PDO($dsn, $this->user, $this->dbpass, $options);
             return $this->conn;
 
         } catch (PDOException $e) {
@@ -27,23 +29,24 @@ class DB
     {
         $this->conn = null;
     }
-    public function Connsultar($table,$item,$conndition)
+    public function Consultar($item,$table,$conndition)
     {  
         if(isset($table))
         {
-            if(isset($item))
+            if(isset($item) and !is_null($item))
                 $sql="SELECT ".$item." FROM ".$table;
             else
                 $sql="SELECT * FROM ".$table;
-            if(isset($conndition))
-                $sql.="WHERE ".$conndition;
+            if(isset($conndition) and !is_null($conndition))
+                $sql.=" WHERE ".$conndition;
             $sql.=";";
-            $conn->query($sql);
-            return $conn;
+            // echo($sql);
+            return $this->conn->query($sql);;
         }
         else
             return null;
     }
+    
     public function Agregar()
     {
 
