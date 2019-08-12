@@ -3,16 +3,13 @@ class DB
 {
     public $user='root';
     public $dbpass='1qazxsw2.-';
-    public $dbname='SWDControl';
+    public $dbname='SWDConntrol';
     public $conn;
     public $result;
-    protected $conn = null;
-
-    public function Connect()
+    public function Connnect()
     {
         try {
-            $dsn = "mysql:dbname="$dbname."; host=localhost";
-
+            $dsn = "mysql:dbname=".$dbname."; host=localhost";
             $options  = array(PDO::ATTR_ERRMODE =>      PDO::ERRMODE_EXCEPTION,
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
             );
@@ -22,7 +19,7 @@ class DB
             return $this->conn;
 
         } catch (PDOException $e) {
-            echo 'Connection error: ' . $e->getMessage();
+            echo 'Connnection error: ' . $e->getMessage();
         }
     }
 
@@ -30,7 +27,7 @@ class DB
     {
         $this->conn = null;
     }
-    public function Consultar($table,$item,$condition)
+    public function Connsultar($table,$item,$conndition)
     {  
         if(isset($table))
         {
@@ -38,8 +35,8 @@ class DB
                 $sql="SELECT ".$item." FROM ".$table;
             else
                 $sql="SELECT * FROM ".$table;
-            if(isset($condition))
-                $sql.="WHERE ".$condition;
+            if(isset($conndition))
+                $sql.="WHERE ".$conndition;
             $sql.=";";
             $conn->query($sql);
             return $conn;
@@ -47,7 +44,7 @@ class DB
         else
             return null;
     }
-    public function Actualizar()
+    public function Agregar()
     {
 
     }

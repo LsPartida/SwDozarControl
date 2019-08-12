@@ -6,6 +6,7 @@ $pages["menu.php"] = "Menu";
 $pages["pendientes.php"] = "Pendientes";
 // $pages["Configuracion.php"] = "Configuración";
 $pages["gestcuentas.php"] = "Gestionar Correos";
+$pages["formTickets.php"] = "Reportes";
 $pages["pruebas.php"] = "Gestionar Correos";
 $activePage;
 if (!isset($_SESSION['usuario']))
