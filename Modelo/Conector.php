@@ -1,11 +1,11 @@
 <?php
 class DB
 {
-    $user='root';
-    $dbpass='1qazxsw2.-';
-    $dbname='SWDControl';
-    $conn;
-    $result;
+    public $user='root';
+    public $dbpass='1qazxsw2.-';
+    public $dbname='SWDControl';
+    public $conn;
+    public $result;
     protected $conn = null;
 
     public function Connect()
@@ -41,7 +41,8 @@ class DB
             if(isset($condition))
                 $sql.="WHERE ".$condition;
             $sql.=";";
-            PDO::query()
+            $conn->query($sql);
+            return $conn;
         }
         else
             return null;
