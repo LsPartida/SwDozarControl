@@ -2,7 +2,12 @@
   display:block;
   margin:auto;
   }
-  
+  .imglink a img{
+    width:120px;
+  }
+  .bg-barra{
+    background: rgb(62, 186, 235);
+  }
   .form-signin {
     width: 100%;
     max-width: 330px;
@@ -34,4 +39,20 @@
   }
   .navlogo{
     height: 5px;
+  }
+  .columna{
+    height: 70vh;
+  }
+  .example-modal .modal {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    left: auto;
+    display: block;
+    z-index: 1;
+  }
+
+  .example-modal .modal {
+    background: transparent !important;
   }
