@@ -3,7 +3,7 @@ session_start();
 class Conector
 {
     public $user='root';
-    public $dbpass='1qazxsw2.-';
+    public $dbpass='';
     public $dbname='SWDControl';
     public $conn;
     public $result;

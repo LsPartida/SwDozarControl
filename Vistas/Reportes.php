@@ -30,7 +30,7 @@ include "plantilla.php";
         <!-- inicia columan inbox -->
         <div class="col-12 col-md-9">
             <div class="box bg-white">
-                <div class="box-header border-top border-primary" >
+                <div class="box-header border-top border-primary itembox" >
                     <h3 id="Titulo">Sus Tickets sin resolver</h3>
                 </div>
             </div>

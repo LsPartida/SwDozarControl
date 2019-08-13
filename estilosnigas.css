@@ -253,16 +253,18 @@ input.required {
 .box{
   /* position:relative; */
   border-radius:3px;
-  background:#b9b6b6;
+  background:#ffffff;
   width:100%;
   box-shadow:0 1px 1px rgba(0,0,0,0.1)
 }
 .box-header{
   border-bottom: solid 1px gray;
+  font-weight: bold;
 }
 .box-item{
-  background:#b9b6b6;
+  background:#ffffff;
   margin:solid 1px grey;
+  padding-left: 5%;
 }
 .box-item:hover{
   background:#a39d9d;
@@ -273,4 +275,22 @@ input.required {
 }
 .itembox{
   height: 75vh;
+}
+.st-btns{
+  width: 15%;
+  height: 10%;
+  margin:0;
+  padding: 0;
+}
+.btnIPen{
+  width: 90%;
+  margin: 0;
+}
+
+.pendiv{
+  margin-left: 5%;
+}
+
+.penLab{
+  font-size: 1.5em;
 }
