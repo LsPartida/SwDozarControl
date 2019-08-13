@@ -2,42 +2,34 @@
 $activePage="pendientes";
 include "plantilla.php";
 ?>
-  <div class="container" style="margin-top:2em;"> 
-    <div class="row">
+   <div class="container" style="margin-top:2em;"> 
+      <div class="row">
       <div class="col-12 col-md-4">
-        <h3>Pendientes globales</h3>
+        <h3>
+          Pendientes globales
+        </h3>
         <div class="container-fluid d-flex flex-column overflow-auto columna shadow">
-          <div class="border-bottom row pendiv">
-            <button class="btn st-btns" data-toggle="modal" data-target="#exampleModal" onclick=setTipo(1)><img src="../imgs/mas.png" class="img-fluid btnIPen" alt="Agregar" /></button>
-            <label class="penLab">Agregar Pendiente</label>
+          <div class="border-bottom">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" onclick=setTipo(1)>
+  Launch demo modal
+</button>
           </div>
-          <?php
-            include "..\Controlador\getPendientesGlob.php";
+        <?php
+          include "..\Controlador\getPendientesGlob.php";
           ?>
         </div>
       </div>
       <div class="col-12 col-md-4">
-        <h3>Prioridad Alta</h3>
+          
           <div class="container-fluid d-flex flex-column overflow-auto columna shadow">
-            <div class="border-bottom row pendiv">
-              <button class="btn st-btns"><img src="../imgs/mas.png" class="img-fluid btnIPen" alt="Agregar" /></button>
-              <label class="penLab">Agregar Pendiente</label>
-            </div>
-            <?php
-              include "..\Controlador\getPendientesGlob.php";
-            ?>
+            asd
+          <!-- Agregar botón -->
           </div>
       </div>
       <div class="col-12 col-md-4">
           <h3>Prioridad Normal</h3>
           <div class="container-fluid d-flex flex-column overflow-auto columna shadow">
-            <div class="border-bottom row pendiv">
-              <button class="btn st-btns"><img src="../imgs/mas.png" class="img-fluid btnIPen" alt="Agregar" /></button>
-              <label class="penLab">Agregar Pendiente</label>
-            </div>
-            <?php
-              include "..\Controlador\getPendientesGlob.php";
-            ?>
+          <!-- Agregar botón -->
           </div>
       </div>  
     </div>

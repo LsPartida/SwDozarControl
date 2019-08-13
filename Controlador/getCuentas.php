@@ -1,4 +1,6 @@
 <?php
+require_once("../Modelo/Conector.php");
+require_once("funcionesTabla.php");
 $obj = new Conector;
 $obj->Connect();
 $res=$obj->Consultar("idcuenta,cuenta,host,username,port","cuentas","activo=true");
@@ -21,5 +23,5 @@ if($res->rowCount()>0)
 }
 else
         $cta="";
-
+        echo($cta);
 ?>
