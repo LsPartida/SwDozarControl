@@ -10,13 +10,10 @@ class Conector
     public function Connect()
     {
         try {
-
             $dsn = "mysql:dbname=".$this->dbname."; host=localhost";
             $options  = array(PDO::ATTR_ERRMODE =>      PDO::ERRMODE_EXCEPTION,
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
             );
-
-
             $this->conn = new PDO($dsn, $this->user, $this->dbpass, $options);
             return $this->conn;
 
@@ -41,7 +38,7 @@ class Conector
                 $sql.=" WHERE ".$conndition;
             $sql.=";";
             // echo($sql);
-            return $this->conn->query($sql);;
+            return $this->conn->query($sql);
         }
         else
             return null;
@@ -60,14 +57,22 @@ class Conector
             $sql.=";";
             echo($sql);
         }
+        return $this->conn->exec($sql);
     }
     public function Editar($table,$campoval,$cond)
     {
-        echo("");
-    }
-    public function Desactivar()
-    {
-
+        $sql;
+        if(isset($table) and !is_null($table))
+        {
+            $sql="UPDATE ".$table." set ";
+            if(isset($campoval)and !is_null($campoval))
+            {
+                $sql.=$campoval;
+                if(isset($cond) and !is_null($cond));
+                $sql.=" WHERE ".$cond.";";
+            }
+        }
+        return $this->conn->exec($sql);
     }
 }
 ?>

@@ -1,5 +1,7 @@
 <?php
 include "plantilla.php";
+include "../Controlador/getusuarios.php";
+// include "../Controlador/getCuentas.php";
 ?>
 <div class="container" style="margin-top:2em;">
     <div class="row">
@@ -31,10 +33,34 @@ include "plantilla.php";
                 <div class="box-header border-top border-primary" >
                     <h3 id="Titulo">Sus Tickets sin resolver</h3>
                 </div>
+                <div id="contenidoelementos">
+                    asd
+                </div>
             </div>
         </div>
-        <!-- termina columnba inbox -->
+        <!-- termina columna inbox -->
     </div>
 </div>
-<script src="../Js/mailbox.js"></script>
-<?php include "final.php" ?>
+<script type="text/javascript">
+function setTitulo(tit) 
+{
+  document.getElementById("Titulo").innerHTML = tit;
+  if(tit==="Configuración de Usuarios")
+  {
+      datos = "<?php echo$usu?>";
+      alert(datos);
+    document.getElementById("contenidoelementos").innerHTML=datos;
+  }
+  if(tit==="Configuración de Derechos")
+  {
+    datos = "<?php echo$der?>";
+    document.getElementById("contenidoelementos").innerHTML=datos;
+  }
+  if(tit==="Configuración de Cuentas")
+  {
+    datos = "<?php echo$cta?>";
+    document.getElementById("contenidoelementos").innerHTML=datos;
+  }
+}
+</script>
+<?php include "final.php"?>

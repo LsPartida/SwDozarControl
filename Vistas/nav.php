@@ -22,10 +22,11 @@ if (!isset($_SESSION['usuario']))
     // header("location:../index.php");
     die();
   }
+  // var_dump($pages);
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-barra">
-  <a class="navbar-brand" href="menu.php">
+  <a class="navbar-brand" href="<?php echo($row['RUTA']); ?>.php">
     <img src="../imgs/dozar logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
     SwDozar
   </a>

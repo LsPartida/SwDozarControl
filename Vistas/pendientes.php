@@ -12,22 +12,21 @@ $activePage="pendientes.php";
         </h3>
         <div class="container-fluid d-flex flex-column overflow-auto columna shadow">
           <button>Agregar</button>
-        <?php
-          include "..\Controlador\getPendientesGlob.php";
-          ?>
+        <?php include "..\Controlador\getPendientesGlob.php"; ?>
         </div>
       </div>
       <div class="col-12 col-md-4">
           <h3>Prioridad Alta</h3>
           <div class="container-fluid d-flex flex-column overflow-auto columna shadow">
-            asd
           <!-- Agregar botón -->
+          <?php include "..\Controlador\getPendientesAlt.php"; ?>
           </div>
       </div>
       <div class="col-12 col-md-4">
           <h3>Prioridad Normal</h3>
           <div class="container-fluid d-flex flex-column overflow-auto columna shadow">
           <!-- Agregar botón -->
+          <?php include "..\Controlador\getPendientesNor.php"; ?>
           </div>
       </div>  
     </div>
