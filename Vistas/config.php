@@ -29,7 +29,8 @@ include "plantilla.php";
         <div class="col-12 col-md-9">
             <div class="box bg-white">
                 <div class="box-header border-top border-primary" >
-                    <h3 id="Titulo">Sus Tickets sin resolver</h3>
+                    <h3 class="h3config" id="Titulo">Configuraciones</h3>
+                    
                 </div>
             </div>
         </div>
