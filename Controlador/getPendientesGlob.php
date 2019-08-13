@@ -19,7 +19,8 @@ foreach ($res as $row)
             <?php echo($row['DESCRIPCION']); ?>
             </p>
             <div class="d-flex justify-content-end">
-                <button type="button" class="btn btn-primary">Editar</a>&nbsp<button type="button" class="btn btn-success">Finalizar</a>
+                <button class="btn st-btns"><img src="../imgs/edit.png" class="img-fluid btnIPen" alt="Agregar" /></button>
+                <button type="button" class="btn btn-success">Finalizar</a>
             </div>
         </div>
     </div>
