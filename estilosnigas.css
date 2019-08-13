@@ -258,3 +258,20 @@ input.required {
   color:white;
   
 }
+.box{
+  /* position:relative; */
+  border-radius:3px;
+  background:#b9b6b6;
+  width:100%;
+  box-shadow:0 1px 1px rgba(0,0,0,0.1)
+}
+.box-header{
+  border-bottom: solid 1px gray;
+}
+.box-item{
+  background:#b9b6b6;
+  margin:solid 1px grey;
+}
+.box-item:hover{
+  background:#a39d9d;
+}

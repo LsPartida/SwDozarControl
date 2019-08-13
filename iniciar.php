@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once("Modelo\Conector.php");
 $usuario=$_POST['usuario'];
 // error_reporting(0);
 $pass=$_POST['pass'];

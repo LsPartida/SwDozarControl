@@ -26,7 +26,7 @@ if (!isset($_SESSION['usuario']))
 
 <nav class="navbar navbar-expand-lg navbar-light bg-barra">
   <a class="navbar-brand" href="menu.php">
-    <img src="./imgs/dozar logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    <img src="../imgs/dozar logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
     SwDozar
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

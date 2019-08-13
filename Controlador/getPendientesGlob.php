@@ -19,7 +19,7 @@ foreach ($res as $row)
             <?php echo($row['DESCRIPCION']); ?>
             </p>
             <div class="d-flex justify-content-end">
-                <a href="#" class="btn btn-primary">Editar</a>&nbsp<a href="#" class="btn btn-success">Finalizar</a>
+                <button type="button" class="btn btn-primary">Editar</a>&nbsp<button type="button" class="btn btn-success">Finalizar</a>
             </div>
         </div>
     </div>

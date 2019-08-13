@@ -3,35 +3,15 @@
 $activePage="pendientes.php";
 ?>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="..\estilosnigas.css">
-    <title>Pendientes</title>
-  </head>
-  <body>
    <?php include "plantilla.php";?>
    <div class="container" style="margin-top:2em;"> 
       <div class="row">
       <div class="col-12 col-md-4">
         <h3>
           Pendientes globales
-          
-          <!-- <?php
-          //   <div class="card" style="width: 18rem;">
-          //   <div class="card-body">
-          //     <h5 class="card-title">Card title</h5>
-          //     <p class="card-text"></p>
-          //     <a href="#" class="btn btn-primary">Go somewhere</a>
-          //   </div>
-          // </div>
-          ?> -->
         </h3>
         <div class="container-fluid d-flex flex-column overflow-auto columna shadow">
+          <button>Agregar</button>
         <?php
           include "..\Controlador\getPendientesGlob.php";
           ?>

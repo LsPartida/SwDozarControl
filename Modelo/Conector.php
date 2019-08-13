@@ -47,9 +47,23 @@ class Conector
             return null;
     }
     
-    public function Agregar()
+    public function Agregar($table,$items,$data)
     {
-
+        if(isset($table))
+        {
+            $sql="INSERT INTO ".$table;
+            if(isset($items) and !is_null($items))
+                $sql.="(".$items.")";
+            $sql.=" VALUES(";
+            if(isset($data) and !is_null($data))
+                $sql.=$data.")";
+            $sql.=";";
+            echo($sql);
+        }
+    }
+    public function Editar($table,$campoval,$cond)
+    {
+        echo("");
     }
     public function Desactivar()
     {
