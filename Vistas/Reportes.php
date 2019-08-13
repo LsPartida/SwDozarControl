@@ -1,4 +1,5 @@
 <?php
+$activePage="REPORTES";
 include "plantilla.php";
 ?>
 <div class="container" style="margin-top:2em;">

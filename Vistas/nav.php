@@ -1,21 +1,11 @@
 <?php
 $varsession=$_SESSION['usuario'];
 $varidsession=$_SESSION['ID'];
+
 $pages = array();
 $obj = new Conector;
 $obj->Connect();
 $res=$obj->Consultar("RUTA,MODULO","USUARIOS INNER JOIN TIPODERECHOS USING (IDTIPODERECHO)INNER JOIN DERECHOS USING(IDTIPODERECHO) INNER JOIN MODULOS USING(IDMODULO)","IDUSUARIO=".$_SESSION['ID']);
-foreach ($res as $row) 
-{
-    $pages[$row['RUTA'].".php"] = $row['MODULO'];
-}
-// $pages["menu.php"] = "Menu";
-// $pages["pendientes.php"] = "Pendientes";
-// $pages["Configuracion.php"] = "Configuración";
-// $pages["gestcuentas.php"] = "Gestionar Correos";
-// $pages["formTickets.php"] = "Reportes";
-// $pages["pruebas.php"] = "Gestionar Correos";
-$activePage;
 if (!isset($_SESSION['usuario']))
   {
     echo("no hay usuario".$varsession);
@@ -24,7 +14,7 @@ if (!isset($_SESSION['usuario']))
   }
 ?>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-barra">
+<nav class="navbar navbar-expand-lg navbar-dark bg-barra">
   <a class="navbar-brand" href="menu.php">
     <img src="../imgs/dozar logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
     SwDozar
@@ -34,13 +24,22 @@ if (!isset($_SESSION['usuario']))
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto ">
-    <?php foreach($pages as $url=>$title):?>
-       <a class="nav-link cambiar 
-       <?php if($url === $activePage):?>active<?php endif;?>"
-       href="<?php echo $url;?>"href="#">
-         <?php echo $title;?>
+      <?php
+      foreach($res as $row)
+      {
+        echo('<a class="nav-link cambiar ');
+        if(strtoupper($activePage)==$row['RUTA'])
+        {
+          echo('active');
+        }
+        echo('" ');
+        echo("href=".$row['RUTA'].".php>".$row['MODULO']."</a>");
+      }
+      ?>
+    <a class="nav-link cambiar" 
+         aqui
       </a>
-      <?php endforeach;?>
+      
 </li>
         <!-- <a class="nav-link " href="#">Pendientes</a> -->
       <!-- <li class="nav-item"> -->

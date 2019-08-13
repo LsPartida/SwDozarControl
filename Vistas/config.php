@@ -1,4 +1,5 @@
 <?php
+$activePage="config";
 include "plantilla.php";
 include "../Controlador/funcionesTabla.php";
 include "..\Controlador\getusuarios.php";
