@@ -41,7 +41,7 @@ class Conector
                 $sql.=" WHERE ".$conndition;
             $sql.=";";
             // echo($sql);
-            return $this->conn->query($sql);;
+            return $this->conn->query($sql);
         }
         else
             return null;

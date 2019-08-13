@@ -9,7 +9,9 @@ include "plantilla.php";
           Pendientes globales
         </h3>
         <div class="container-fluid d-flex flex-column overflow-auto columna shadow">
-          <button>Agregar</button>
+          <div class="border-bottom">
+            <button>Agregar</button>
+          </div>
         <?php
           include "..\Controlador\getPendientesGlob.php";
           ?>
