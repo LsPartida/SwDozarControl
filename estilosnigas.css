@@ -131,15 +131,7 @@ form#form1 h6#successMsg {
   font-family: sans-serif;
 }
 
-input {
-  height: 2em;
-  width: 20em;
-  margin: 0.2em 0.7em 0.2em 0.7em;
-  padding: 0em 0.5em;
-  outline: none;
-  border: 1px solid #AAA;
-  border-radius: 5px;
-}
+
 
 form#form1 input[type="text"] {
   height: 2em;
@@ -278,4 +270,7 @@ input.required {
 
 .h3config{
   padding-top: 1%;
+}
+.itembox{
+  height: 75vh;
 }
