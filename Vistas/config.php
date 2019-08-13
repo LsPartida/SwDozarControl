@@ -34,7 +34,7 @@ include "../Controlador/getusuarios.php";
                     <h3 id="Titulo">Sus Tickets sin resolver</h3>
                 </div>
                 <div id="contenidoelementos">
-                    asd
+                    asda
                 </div>
             </div>
         </div>
