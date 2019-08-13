@@ -2,9 +2,9 @@
 $activePage="config";
 include "plantilla.php";
 include "../Controlador/funcionesTabla.php";
-include "..\Controlador\getusuarios.php";
-include "..\Controlador\getCuentas.php";
-include "..\Controlador\getDerechos.php";
+// include "..\Controlador\getusuarios.php";
+// include "..\Controlador\getCuentas.php";
+// include "..\Controlador\getDerechos.php";
 ?>
 <div class="container" style="margin-top:2em;">
     <div class="row">
@@ -45,30 +45,5 @@ include "..\Controlador\getDerechos.php";
         <!-- termina columnba inbox -->
     </div>
 </div>
-<script type="text/javascript">
-function setTitulo(tit,tipo) 
-{
-  document.getElementById("Titulo").innerHTML = tit;
-  addContr(tipo);
-}
-function addContr(tipo)
-{
-    var datos="";
-    var campo = document.getElementById("contenido");
-    if(tipo==1)
-    {
-        datos="<?php echo $usu?>";
-    }
-    if(tipo==2)
-    {
-        datos="<?php echo $der?>";
-    }
-    if(tipo==3)
-    {
-        datos="<?php echo $cta?>";
-    }
-    campo.innerHTML=null;
-    campo.innerHTML=datos;
-}
-</script>
+<script src="../Js/mailbox.js"></script>
 <?php include "final.php" ?>

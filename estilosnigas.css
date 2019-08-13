@@ -274,3 +274,6 @@ input.required {
 .itembox{
   height: 75vh;
 }
+.modalbtn{
+  width: 100%;
+}

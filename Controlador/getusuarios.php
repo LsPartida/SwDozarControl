@@ -1,4 +1,6 @@
 <?php
+require_once("../Modelo/Conector.php");
+require_once("funcionesTabla.php");
 $obj = new Conector;
 $obj->Connect();
 $res=$obj->Consultar("idusuario,usuario","usuarios","activo=true");
@@ -18,6 +20,7 @@ if($res->rowCount()>0)
 }
 else
         $usu="";
+echo ($usu);
 ?>
 
 

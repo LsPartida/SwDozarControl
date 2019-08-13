@@ -1,4 +1,6 @@
 <?php
+require_once("../Modelo/Conector.php");
+require_once("funcionesTabla.php");
 $obj = new Conector;
 $obj->Connect();
 $res=$obj->Consultar("idtipoderecho,tipoderecho","tipoderechos","activo=true");
@@ -14,8 +16,9 @@ if($res->rowCount()>0)
                 $der.=addRow($count);
                 $der.=addData($row['tipoderecho']);
         }
-        $cta.=endTable();
+        $der.=endTable();
 }
 else
     $der="";
+    echo($der);
 ?>
