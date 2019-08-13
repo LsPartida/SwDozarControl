@@ -15,7 +15,7 @@
   session_start();
     if (isset($_SESSION['usuario']))
   {
-    header("location:Vistas\menu.php");
+    header("location:Vistas\pendientes.php");
     die();
   }
   //Si no hay usuarios, crear admin admin y montar info de modulos

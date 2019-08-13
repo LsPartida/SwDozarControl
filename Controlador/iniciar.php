@@ -20,7 +20,7 @@ if($idusuario != null)
     $varidsesion=$_SESSION['ID'] = $idusuario;
     // var_dump($varsesion);
     // var_dump($varidsesion);
-    header('location:..\Vistas\menu.php');
+    header('location:..\Vistas\pendientes.php');
     die();
 }
 ?>
