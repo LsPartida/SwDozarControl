@@ -313,17 +313,25 @@ input.required {
 }
 
 .img2Nav{
-  width: 3%;
+  width: 5%;
   margin: 0;
-  padding-top: 0.5%;
-  margin-left: 80%;
+  padding-top: 1.3%;
 }
 
-.nava{
-  margin: 0;
-  position: relative;
+.btnNav{
+  background-image: url(imgs/logoutt.png);
+  background-repeat:no-repeat;
+  width: 30px;
+  height: 30px;
+  background-position:center;
+  padding: 0;
 }
 
-.username{
-  margin:0;
+.lblImg{
+  background-image: url(imgs/userr.png);
+  background-repeat:no-repeat;
+  width: 30px;
+  height: 30px;
+  background-position:center;
+  padding: 0;
 }
