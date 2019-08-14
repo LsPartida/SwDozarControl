@@ -1,10 +1,6 @@
 <?php
 $activePage="config";
 include "plantilla.php";
-include "../Controlador/funcionesTabla.php";
-// include "..\Controlador\getusuarios.php";
-// include "..\Controlador\getCuentas.php";
-// include "..\Controlador\getDerechos.php";
 ?>
 <div class="container" style="margin-top:2em;">
     <div class="row">
