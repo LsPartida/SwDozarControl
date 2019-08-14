@@ -2,6 +2,7 @@
 $activePage="pendientes";
 include "plantilla.php";
 ?>
+<body onload="Pendientes();">
   <div class="container" style="margin-top:2em;"> 
     <div class="row">
       <div class="col-12 col-md-4">
@@ -11,9 +12,7 @@ include "plantilla.php";
             <button class="btn st-btns" data-toggle="modal" data-target="#exampleModal" onclick=setTipo(1)><img src="../imgs/mas.png" class="img-fluid btnIPen" alt="Agregar" /></button>
             <label class="penLab">Agregar Pendiente</label>
           </div>
-          <?php
-            include "..\Controlador\getPendientesGlob.php";
-          ?>
+          <div id="contglob"></div>
         </div>
       </div>
       <div class="col-12 col-md-4">
@@ -23,9 +22,7 @@ include "plantilla.php";
               <button class="btn st-btns"><img src="../imgs/mas.png" class="img-fluid btnIPen" alt="Agregar" /></button>
               <label class="penLab">Agregar Pendiente</label>
             </div>
-            <?php
-              include "..\Controlador\getPendientesGlob.php";
-            ?>
+            <div id="contalt"></div>
           </div>
       </div>
       <div class="col-12 col-md-4">
@@ -35,9 +32,7 @@ include "plantilla.php";
               <button class="btn st-btns"><img src="../imgs/mas.png" class="img-fluid btnIPen" alt="Agregar" /></button>
               <label class="penLab">Agregar Pendiente</label>
             </div>
-            <?php
-              include "..\Controlador\getPendientesGlob.php";
-            ?>
+            <div id="contbaj"></div>
           </div>
       </div>  
     </div>
@@ -81,7 +76,7 @@ include "plantilla.php";
   </div>
 </div>
   
-  
+    <script src="../Js/getpends.js"></script>
     <script src="../Js/addPending.js"></script>
     <?php include "final.php" ?>
 

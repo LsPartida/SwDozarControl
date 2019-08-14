@@ -3,7 +3,7 @@ require_once("../Modelo/Conector.php");
 require_once("funcionesCard.php");
 $obj = new Conector;
 $obj->Connect();
-$res=$obj->Consultar(null,"pendientes inner join pendientesdetalle using(idpendiente)","TIPOPENDIENTE=3 and FECHAFIN IS NULL");
+$res=$obj->Consultar(null,"pendientes inner join pendientesdetalle using(idpendiente)","TIPOPENDIENTE=2 and FECHAFIN IS NULL and idusuario=".$varidsession);
 
 $cards="";
 foreach ($res as $row) 

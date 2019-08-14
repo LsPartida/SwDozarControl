@@ -1,9 +1,9 @@
 <?php
 function startTable($titulos)
 {
-        $aux="<thead><tr><th scope='col'></th><th scope='col'>";
+        $aux="<thead><tr><th scope='col'>#</th>";
         foreach($titulos as $i)
-                $aux.=$i;
+                $aux.="<th scope='col'>".$i."</th>";
         $aux.="</th></tr></thead><tbody>";
         return $aux;
 }

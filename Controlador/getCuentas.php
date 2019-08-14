@@ -6,7 +6,7 @@ $obj->Connect();
 $res=$obj->Consultar("idcuenta,cuenta,host,username,port","cuentas","activo=true");
 $cta="";
 $count=0;
-$tits=array("Cuenta,host,username,port");
+$tits=array("Cuenta","host","username","port");
 if($res->rowCount()>0)
 {
         $cta=startTable($tits);

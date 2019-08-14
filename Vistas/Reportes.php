@@ -11,16 +11,16 @@ include "plantilla.php";
                     Vistas
                 </div>
                 <div class="collapse show" id="vistas">
-                    <div class="box-item" onClick="setTitulo('Sus Tickets sin resolver');">
+                    <div class="box-item" onClick="setTitulo('Sus Tickets sin resolver',1);">
                         Sus Tickets sin resolver
                     </div>
-                    <div class="box-item" onClick="setTitulo('Tickets sin asignar');">
+                    <div class="box-item" onClick="setTitulo('Tickets sin asignar',2);">
                         Tickets sin asignar
                     </div>
-                    <div class="box-item" onClick="setTitulo('Todos los Tickets sin resolver');">
+                    <div class="box-item" onClick="setTitulo('Todos los Tickets sin resolver',3);">
                         Todos los Tickets sin resolver
                     </div>
-                    <div class="box-item" onClick="setTitulo('Tickets pendientes');">
+                    <div class="box-item" onClick="setTitulo('Tickets pendientes',4);">
                         Tickets pendientes
                     </div>
                 </div>
