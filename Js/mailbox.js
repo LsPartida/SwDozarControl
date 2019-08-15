@@ -5,14 +5,18 @@ function setTitulo(titulo,cont)
     {
         case 1:
             Cargar("../controlador/getusuarios.php");
+            document.getElementById("boton").innerHTML='<button onClick="addUsu()" class="btn st-btns"><img src="../imgs/mas.png" class="img-fluid smalladd" alt="Agregar" /></button>';
             break;
         case 2:
-                Cargar("../controlador/getDerechos.php");
+            Cargar("../controlador/getDerechos.php");
+            document.getElementById("boton").innerHTML='<button onClick="addDer()" class="btn st-btns"><img src="../imgs/mas.png" class="img-fluid smalladd" alt="Agregar" /></button>';
             break;
         case 3:
                 Cargar("../controlador/getCuentas.php");
+                document.getElementById("boton").innerHTML='<button onClick="addCta()" class="btn st-btns"><img src="../imgs/mas.png" class="img-fluid smalladd" alt="Agregar" /></button>';
             break;
     }
+    
 }
 function Cargar(url) 
 {

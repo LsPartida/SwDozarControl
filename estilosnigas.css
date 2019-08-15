@@ -247,6 +247,7 @@ input.required {
 
   .modalbtn{
     width: 100%;
+
   }
 
 .cambiar:hover{
@@ -272,11 +273,11 @@ input.required {
 }
 .box-item:hover{
   background:#a39d9d;
-  border-
 }
 
 .h3config{
   padding-top: 1%;
+  width: 99%;
 }
 .itembox{
   height: 75vh;
@@ -348,4 +349,3 @@ input.required {
     display:none;
   }
  }
-=======
