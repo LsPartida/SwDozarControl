@@ -28,7 +28,12 @@ include "plantilla.php";
         <div class="col-12 col-md-9">
             <div class="box bg-white">
                 <div class="box-header border-top border-primary itembox" >
+                <div class="d-flex justify-content-between">
                     <h3 class="h3config" id="Titulo">Configuraciones</h3>
+                        <div class="d-flex justify-content-end" id="boton"></div>
+                        
+                        
+                </div>
                     <div >
                         <table class="table table-hover" id="contenido">
                         </table>
