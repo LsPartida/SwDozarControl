@@ -36,9 +36,10 @@ if (!isset($_SESSION['usuario']))
         }
       ?>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <form class="form my-2 my-lg-0 d-md-flex" action="../Controlador/Cerrar.php">
       <!--<img src="../imgs/user.png" alt="" class="img2Nav">&nbsp;&nbsp;-->
-      <label class="lblImg"></label>&nbsp;
+      <label class="lblImg d-print-flex">&nbsp;&nbsp;
+      </label>
       <h4 class="username"><?php echo("".$varsession)?></h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <button class="btn my-2 my-sm-0 btnNav" type="submit"></button>
     </form>

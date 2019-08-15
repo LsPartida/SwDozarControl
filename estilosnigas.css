@@ -335,3 +335,11 @@ input.required {
   background-position:center;
   padding: 0;
 }
+.table .td:hover{
+  
+}
+@media (max-width: 992px) { 
+  .lblImg{
+    display:none;
+  }
+ }
