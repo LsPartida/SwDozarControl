@@ -58,5 +58,45 @@ include "plantilla.php";
         <!-- termina columnba inbox -->
     </div>
 </div>
+<div class="modal fade" id="ModalAddUsu" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar nuevo Usuario</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row d-flex">
+          <div class="col-6">
+            <label>Nombre de usuario:</label>
+          </div>
+          <div class="col-6">
+            <label>Selecciona Derechos:</label>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-6">
+            <input type="text" class="modalbtn rounded" name="cfdilite">
+          </div>
+          <div class="col-6">
+            <select>
+                <option value="Op1">Op1</option>
+                <option value="Op2">Op2</option>
+                <option value="Op3">Op3</option>
+                <option value="Op4">ESKEEEEELEEEERRR</option>
+            </select>
+          </div>
+        </div>
+    </div>
+</div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+    </div>
+    </div>
+  </div>
+</div>
 <script src="../Js/mailbox.js"></script>
 <?php include "final.php" ?>

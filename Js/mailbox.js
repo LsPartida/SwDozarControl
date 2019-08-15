@@ -5,7 +5,7 @@ function setTitulo(titulo,cont)
     {
         case 1:
             Cargar("../controlador/getusuarios.php");
-            document.getElementById("boton").innerHTML='<button onClick="addUsu()" class="btn st-btns"><img src="../imgs/mas.png" class="img-fluid smalladd" alt="Agregar" /></button>';
+            document.getElementById("boton").innerHTML='<button data-toggle="modal" data-target="#ModalAddUsu" onClick="addUsu()" class="btn st-btns"><img src="../imgs/mas.png" class="img-fluid smalladd" alt="Agregar" /></button>';
             break;
         case 2:
             Cargar("../controlador/getDerechos.php");
@@ -32,6 +32,3 @@ function Cargar(url)
     xmlhttp.open("POST", url, true);
     xmlhttp.send(); 
 }
-/********************************************************
- * *****************************************************
- * ******************************************** */
