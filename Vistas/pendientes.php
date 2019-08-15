@@ -54,10 +54,12 @@ include "plantilla.php";
       </div>
       <div class="modal-body">
         <div class="row">
-          <h4>Seleccione el tipo de pendiente &nbsp;</h4><h4 id="tipo"></h4>
+          <div class="col d-flex">
+            <p>Seleccione el tipo de pendiente &nbsp;</p><p id="tipo"></p>
+          </div>
         </div>
         <div class="row d-flex">
-        <div class="col-3">
+          <div class="col-3">
             <input type="image" src="../imgs/b1.png" class="modalbtn rounded" name="msiva">
           </div>
           <div class="col-3">
