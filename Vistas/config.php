@@ -7,7 +7,7 @@ include "plantilla.php";
         <!-- Inicia columan izq -->
         <div class="col-12 col-md-3">
             <div class="box">
-                <div class="box-header" aria-expanded="true" data-toggle="collapse" data-target="#Vistas" onClick="$('.collapse').collapse();">
+                <div class="box-header" aria-expanded="true" data-toggle="collapse" data-target="#Vistas" onClick="$('#Vistas').collapse();">
                     Configuraciones
                 </div>
                 <div class="collapse show" id="vistas">
@@ -20,8 +20,6 @@ include "plantilla.php";
                     <div class="box-item" onClick="setTitulo('Configuración de cuentas',3);">
                         Configuración de Cuentas
                     </div>
-                    <div class="box-item" onClick="setTitulo('Tickets pendientes');">
-                    </div>
                 </div>
             </div>
         </div>
@@ -32,7 +30,7 @@ include "plantilla.php";
                 <div class="box-header border-top border-primary itembox" >
                     <h3 class="h3config" id="Titulo">Configuraciones</h3>
                     <div >
-                        <table class="table table-striped" id="contenido">
+                        <table class="table table-hover" id="contenido">
                         </table>
                     </div>
                 </div>
