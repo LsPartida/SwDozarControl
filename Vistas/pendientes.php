@@ -2,14 +2,16 @@
 $activePage="pendientes";
 include "plantilla.php";
 ?>
-<body onload="Pendientes();">
+<body onload="cargarPendientes(<?php echo $varidsession ; ?>);">
   <div class="container" style="margin-top:2em;"> 
     <div class="row">
       <div class="col-12 col-md-4">
         <h3>Pendientes globales</h3>
         <div class="container-fluid d-flex flex-column overflow-auto columna shadow">
           <div class="border-bottom row pendiv">
-            <button class="btn st-btns" data-toggle="modal" data-target="#exampleModal" onclick=setTipo(1)><img src="../imgs/mas.png" class="img-fluid btnIPen" alt="Agregar" /></button>
+            <button class="btn st-btns" data-toggle="modal" data-target="#exampleModal" onclick="setTipo(1);">
+            <img src="../imgs/mas.png" class="img-fluid btnIPen" alt="Agregar" />
+            </button>
             <label class="penLab">Agregar Pendiente</label>
           </div>
           <div id="contglob"></div>
@@ -19,7 +21,9 @@ include "plantilla.php";
         <h3>Prioridad Alta</h3>
           <div class="container-fluid d-flex flex-column overflow-auto columna shadow">
             <div class="border-bottom row pendiv">
-              <button class="btn st-btns"><img src="../imgs/mas.png" class="img-fluid btnIPen" alt="Agregar" /></button>
+            <button class="btn st-btns" data-toggle="modal" data-target="#exampleModal" onclick="setTipo(2);">
+            <img src="../imgs/mas.png" class="img-fluid btnIPen" alt="Agregar" />
+            </button>
               <label class="penLab">Agregar Pendiente</label>
             </div>
             <div id="contalt"></div>
@@ -29,7 +33,9 @@ include "plantilla.php";
           <h3>Prioridad Normal</h3>
           <div class="container-fluid d-flex flex-column overflow-auto columna shadow">
             <div class="border-bottom row pendiv">
-              <button class="btn st-btns"><img src="../imgs/mas.png" class="img-fluid btnIPen" alt="Agregar" /></button>
+            <button class="btn st-btns" data-toggle="modal" data-target="#exampleModal" onclick="setTipo(3);">
+            <img src="../imgs/mas.png" class="img-fluid btnIPen" alt="Agregar" />
+            </button>
               <label class="penLab">Agregar Pendiente</label>
             </div>
             <div id="contbaj"></div>
@@ -55,16 +61,16 @@ include "plantilla.php";
         </div>
         <div class="row d-flex">
           <div class="col-3">
-            <input type="image" src="../imgs/b1.png" class="modalbtn rounded" name="msiva">
+            <input type="image" onclick="setApp(1);" src="../imgs/b1.png" class="modalbtn rounded" name="msiva">
           </div>
           <div class="col-3">
-            <input type="image" src="../imgs/b2.png" class="modalbtn rounded" name="erpdoz">
+            <input type="image" onclick="setApp(2);" src="../imgs/b2.png" class="modalbtn rounded" name="erpdoz">
           </div>
           <div class="col-3">
-            <input type="image" src="../imgs/b3.png" class="modalbtn rounded" name="cfdilite">
+            <input type="image" onclick="setApp(3);" src="../imgs/b3.png" class="modalbtn rounded" name="cfdilite">
           </div>
           <div class="col-3">
-            <input type="image" src="../imgs/b4.png" class="modalbtn rounded" name="otros">
+            <input type="image" onclick="setApp(4);" src="../imgs/b4.png" class="modalbtn rounded" name="otros">
           </div>
         </div>
       </div><!--Termina cuerpo del modal-->
@@ -75,10 +81,13 @@ include "plantilla.php";
     </div>
   </div>
 </div>
-<!---------------------------------------------Modal----------------------------------------------->
-    <script src="../Js/getpends.js"></script>
-    <script src="../Js/addPending.js"></script>
-    <?php include "final.php" ?>
+<form hidden action="../vistas/pendientedetalle.php" method="post" id="form">
+  <input type="text" name="ID" id="ID">
+  <input type="text" name="app" id="app">
+  <input type="text" name="tipo" id="tipopend">
+</form>
+    <script src="../Js/Pendings.js"></script>
+<?php include "final.php"; ?>
 
 
    
