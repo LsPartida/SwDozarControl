@@ -58,8 +58,9 @@ class Conector
             if(isset($data) and !is_null($data))
                 $sql.=$data.")";
             $sql.=";";
-            echo($sql);
+            // echo($sql);
         }
+            $this->conn->exec($sql);
     }
     public function Editar($table,$campoval,$cond)
     {
