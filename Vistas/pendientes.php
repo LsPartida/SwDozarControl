@@ -61,7 +61,7 @@ include "plantilla.php";
         </div>
         <div class="row d-flex">
           <div class="col-3">
-            <input type="image" onclick="setApp(1);" src="../imgs/b1.png" class="modalbtn rounded" name="msiva">
+            <input type="image" src="../imgs/b1.png" class="modalbtn rounded" data-toggle="modal" data-target="#exampleMod" name="msiva" onclick="$('#exampleModal').modal('hide');"> 
           </div>
           <div class="col-3">
             <input type="image" onclick="setApp(2);" src="../imgs/b2.png" class="modalbtn rounded" name="erpdoz">
@@ -81,6 +81,46 @@ include "plantilla.php";
     </div>
   </div>
 </div>
+
+<!---------------------------------------------Modal----------------------------------------------->
+<!---------------------------------------------Modal----------------------------------------------->
+<div class="modal" id="exampleMod" tabindex="-1" role="dialog aria-labelledby="exampleModalLabel" aria-hidden="true"">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header"><!--empieza header del modal-->
+        <h5 class="modal-title" id="exampleModalLabel">Agregar Nuevo Pendiente</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div><!--Termina header del modal-->
+      <div class="modal-body"><!--empieza cuerpo del modal-->
+        <div class="row">
+          <div class="col d-flex">
+            <p>Seleccione el tipo de pendiente &nbsp;</p><p id="tipo"></p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-3">
+            <input type="image" src="../imgs/b1.png" class="modalbtn rounded" name="msiva">
+          </div>
+          <div class="col-3">
+            <input type="image" src="../imgs/b2.png" class="modalbtn rounded" name="erpdoz">
+          </div>
+
+        </div>
+      </div><!--Termina cuerpo del modal-->
+      <div class="modal-footer"><!--empieza footer del modal-->
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!---------------------------------------------Modal----------------------------------------------->
+    <script src="../Js/getpends.js"></script>
+    <script src="../Js/addPending.js"></script>
+    <?php include "final.php" ?>
+
 <form hidden action="../vistas/pendientedetalle.php" method="post" id="form">
   <input type="text" name="ID" id="ID">
   <input type="text" name="app" id="app">
