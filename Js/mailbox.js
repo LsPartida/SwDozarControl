@@ -9,11 +9,11 @@ function setTitulo(titulo,cont)
             break;
         case 2:
             Cargar("../controlador/getDerechos.php");
-            document.getElementById("boton").innerHTML='<button onClick="addDer()" class="btn st-btns"><img src="../imgs/mas.png" class="img-fluid smalladd" alt="Agregar" /></button>';
+            document.getElementById("boton").innerHTML='<button data-toggle="modal" data-target="#ModalAddDer" onClick="addDer()" class="btn st-btns"><img src="../imgs/mas.png" class="img-fluid smalladd" alt="Agregar" /></button>';
             break;
         case 3:
                 Cargar("../controlador/getCuentas.php");
-                document.getElementById("boton").innerHTML='<button onClick="addCta()" class="btn st-btns"><img src="../imgs/mas.png" class="img-fluid smalladd" alt="Agregar" /></button>';
+                document.getElementById("boton").innerHTML='<button data-toggle="modal" data-target="#ModalAddCuenta" onClick="addCta()" class="btn st-btns"><img src="../imgs/mas.png" class="img-fluid smalladd" alt="Agregar" /></button>';
             break;
     }
     
