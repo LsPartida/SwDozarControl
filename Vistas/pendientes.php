@@ -37,17 +37,17 @@ include "plantilla.php";
       </div>  
     </div>
   </div>
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!---------------------------------------------Modal----------------------------------------------->
+<div class="modal" id="exampleModal" tabindex="-1" role="dialog aria-labelledby="exampleModalLabel" aria-hidden="true"">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+      <div class="modal-header"><!--empieza header del modal-->
+        <h5 class="modal-title" id="exampleModalLabel">Agregar Nuevo Pendiente</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body">
+      </div><!--Termina header del modal-->
+      <div class="modal-body"><!--empieza cuerpo del modal-->
         <div class="row">
           <div class="col d-flex">
             <p>Seleccione el tipo de pendiente &nbsp;</p><p id="tipo"></p>
@@ -66,18 +66,16 @@ include "plantilla.php";
           <div class="col-3">
             <input type="image" src="../imgs/b4.png" class="modalbtn rounded" name="otros">
           </div>
-    </div>
-
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+      </div><!--Termina cuerpo del modal-->
+      <div class="modal-footer"><!--empieza footer del modal-->
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Agregar</button>
       </div>
     </div>
   </div>
 </div>
-  
+<!---------------------------------------------Modal----------------------------------------------->
     <script src="../Js/getpends.js"></script>
     <script src="../Js/addPending.js"></script>
     <?php include "final.php" ?>
