@@ -22,7 +22,7 @@
   ?>
   <body>
     <form class="form-signin" action="Controlador\iniciar.php" method="POST">
-  		<img class="mb-4" src="imgs/dozar logo.png" alt="" width="100" height="100" margin>
+  		<img class="mb-4 logo" src="imgs/dozar logo.png" alt="" width="100" height="100" margin>
   		<h1 class="h3 mb-3 font-weight-normal">Por favor inicia sesión</h1>
   		<label for="inputEmail" class="sr-only">Correo Electronico</label>
   		<input type="text" id="inputUN" class="form-control" placeholder="Nombre de usuario" required autofocus name="usuario">

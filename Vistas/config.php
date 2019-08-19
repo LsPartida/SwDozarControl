@@ -109,6 +109,7 @@ include "plantilla.php";
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div><!--Termina header del modal-->
+            <form action="../controlador/addDer.php" method="post">
             <div class="modal-body"><!--empieza cuerpo del modal-->
                 <div class="row d-flex">
                     <div class="col-6">
@@ -117,14 +118,15 @@ include "plantilla.php";
                 </div>
                 <div class="row d-flex">
                     <div class="col-6">
-                        <input type="text" class="modalbtn rounded" name="cfdilite">
+                        <input type="text" class="modalbtn rounded" name="tipoder">
                     </div>
                 </div>
             </div><!--Termina cuerpo del modal-->
             <div class="modal-footer"><!--empieza footer del modal-->
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Agregar</button>
+                <button type="submit" class="btn btn-primary" submit>Agregar</button>
             </div>
+            </form>
         </div>
     </div>
 </div>
@@ -169,7 +171,7 @@ include "plantilla.php";
                         <label>Contraseña:</label>
                     </div>
                     <div class="col-6">
-                        <input type="text" class="modalbtn rounded" name="cfdilite">
+                        <input type="password" class="modalbtn rounded" name="cfdilite">
                     </div>
                 </div>
                 <div class="row d-flex">
