@@ -9,6 +9,10 @@ function getId(id)
 {
     this.id=id;
 }
+function finalizar(idcard)
+{
+    console.log(idcard)
+}
 function setApp(app)
 {
     this.app=app;
