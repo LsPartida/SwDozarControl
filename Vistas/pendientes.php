@@ -85,7 +85,7 @@ include "plantilla.php";
 
 <!---------------------------------------------Modal----------------------------------------------->
 <!---------------------------------------------Modal----------------------------------------------->
-<div class="modal" id="exampleMod" tabindex="-1" role="dialog aria-labelledby="exampleModalLabel" aria-hidden="true"">
+<div class="modal" id="editModal" tabindex="-1" role="dialog aria-labelledby="exampleModalLabel" aria-hidden="true"">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header"><!--empieza header del modal-->
@@ -96,24 +96,29 @@ include "plantilla.php";
       </div><!--Termina header del modal-->
       <div class="modal-body"><!--empieza cuerpo del modal-->
         <div class="row">
-          <div class="col d-flex">
-            <p>Seleccione el tipo de pendiente &nbsp;</p><p id="tipo"></p>
+          <div class="col">
+          <form action="../controlador/addPending.php" method="post">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">Titulo</label>
+                        <input type="Text" class="form-control" id="Titulo" placeholder="Titulo" name="Titulo">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4">Empresa</label>
+                        <input  type="text" class="form-control" id="Empresa" placeholder="Empresa" name="Empresa">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="exampleFormControlTextarea1">Descripcion</label>
+                        <textarea class="form-control" id="descripcion" rows="3" name="descripcion"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Agregar</button>
+            </form>
           </div>
-        </div>
-        <div class="row d-flex">
-          <div class="col-3">
-            <input type="image" src="../imgs/b1.png" class="modalbtn rounded" name="msiva">
-          </div>
-          <div class="col-3">
-            <input type="image" src="../imgs/b2.png" class="modalbtn rounded" name="erpdoz">
-          </div>
-
         </div>
       </div><!--Termina cuerpo del modal-->
-      <div class="modal-footer"><!--empieza footer del modal-->
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Agregar</button>
-      </div>
     </div>
   </div>
 </div>

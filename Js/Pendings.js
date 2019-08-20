@@ -41,9 +41,19 @@ function Cargar(url,campo)
     xmlhttp.open("POST", url, true);
     xmlhttp.send(); 
 }
+function Llenar(idcard)
+{
+    console.log(idcard);
+}
+function editar(idcard,contenido)
+{
+    arr ={"idcard": idcard,"contenido":contenido};
+    // Abrir modal de edicion
+    // post_to_url("../Controlador/editPending.php",arr,"POST")
+}
 function finalizar(idcard) 
 {
-    arr =["idcard"];
+    arr ={"idcard": idcard};
     post_to_url("../Controlador/endPending.php",arr,"POST")
 }
 function post_to_url(path, params, method) 

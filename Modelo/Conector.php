@@ -64,15 +64,17 @@ class Conector
     }
     public function Editar($table,$campoval,$cond)
     {
+        // var_dump($cond);
         if(isset($table))
         {
             if(isset($campoval))
             {
                 $sql="UPDATE ".$table." SET ".$campoval;
                 if (isset($cond))
-                    $sql.=" ".$cond;
+                    $sql.=" WHERE ".$cond;
             }
         }
+        var_dump($sql);
         $this->conn->exec($sql);
     }
     public function Desactivar()

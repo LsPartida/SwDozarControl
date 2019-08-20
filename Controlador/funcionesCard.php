@@ -15,11 +15,12 @@ function createCard($idcard,$idusuario,$titulo,$descripcion,$idapp)
     //         $aux.=' bg-secondary text-white';
     // }
     // $aux.='onClick="getCardInfo('.$idusuario.')">';
-    $aux.='<div class="card-body"><h5 class="card-title">'.$titulo.'</h5>';
-    $aux.='<p class="card-text">'.$descripcion.'</p>';
+    $aux.='<div class="card-body"><h5 id="Titulo'.$idcard.'" class="card-title">'.$titulo.'</h5>';
+    $aux.='<p id="descripcion'.$idcard.'" class="card-text">'.$descripcion.'</p>';
     $aux.='<div class="d-flex justify-content-end">';
-    $aux.='<button onclick="editar('.$idcard.')" class="btn st-btns"><img src="../imgs/edit.png" class="img-fluid btnIPen" alt="Agregar" /></button>';
+    $aux.='<button onclick="Llenar('.$idcard.')" data-toggle="modal" data-target="#editModal" class="btn st-btns"><img src="../imgs/edit.png" class="img-fluid btnIPen" alt="Agregar" /></button>';
     $aux.='<button onclick="finalizar('.$idcard.')"(type="button" class="btn btn-success">Finalizar</a></div></div></div>';
     return $aux;
+    
 }
 ?>
