@@ -2,6 +2,7 @@
 $activePage="pendientes";
 include "plantilla.php";
 ?>
+<script src="../Js/Pendings.js"></script>
 <body onload="cargarPendientes(<?php echo $varidsession ; ?>);">
   <div class="container" style="margin-top:2em;"> 
     <div class="row">
@@ -117,16 +118,15 @@ include "plantilla.php";
   </div>
 </div>
 <!---------------------------------------------Modal----------------------------------------------->
-    <script src="../Js/getpends.js"></script>
     <script src="../Js/addPending.js"></script>
-    <?php include "final.php" ?>
+   <script src="../Js/Pendings.js"></script> 
 
 <form hidden action="../vistas/pendientedetalle.php" method="post" id="form">
   <input type="text" name="ID" id="ID">
   <input type="text" name="app" id="app">
   <input type="text" name="tipo" id="tipopend">
 </form>
-    <script src="../Js/Pendings.js"></script>
+   
 <?php include "final.php"; ?>
 
 

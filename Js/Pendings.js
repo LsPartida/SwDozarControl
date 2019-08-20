@@ -9,17 +9,11 @@ function getId(id)
 {
     this.id=id;
 }
-function finalizar(idcard)
-{
-    console.log(idcard)
-}
+
 function setApp(app)
 {
     this.app=app;
-    console.log(tipo+" "+app+" "+id);
-    // document.getElementsByName("ID").text=id;
-    // document.getElementsByName("app").value=" asdsa"+app;
-    // document.getElementsByName("tipo").attribute=tipo;
+    
     document.getElementById("ID").value=id;
     document.getElementById("app").value=app;
     document.getElementById("tipopend").value=tipo;
@@ -33,6 +27,7 @@ function cargarPendientes(id)
     Cargar('../Controlador/getPendientesAlt.php',"contalt");
     Cargar('../Controlador/getPendientesNorm.php',"contbaj");
 }
+
 function Cargar(url,campo) 
 {
     var xmlhttp = new XMLHttpRequest();
@@ -46,8 +41,13 @@ function Cargar(url,campo)
     xmlhttp.open("POST", url, true);
     xmlhttp.send(); 
 }
-
-function post_to_url(path, params, method) {
+function finalizar(idcard) 
+{
+    arr =["idcard"];
+    post_to_url("../Controlador/endPending.php",arr,"POST")
+}
+function post_to_url(path, params, method) 
+{
     method = method || "post"; // Set method to post by default, if not specified.
 
     // The rest of this code assumes you are not using a library.
@@ -56,19 +56,22 @@ function post_to_url(path, params, method) {
     form.setAttribute("method", method);
     form.setAttribute("action", path);
 
-    var addField = function( key, value ){
+    var addField = function( key, value )
+    {
         var hiddenField = document.createElement("input");
         hiddenField.setAttribute("type", "hidden");
         hiddenField.setAttribute("name", key);
         hiddenField.setAttribute("value", value );
-
         form.appendChild(hiddenField);
     }; 
-
-    for(var key in params) {
-        if(params.hasOwnProperty(key)) {
-            if( params[key] instanceof Array ){
-                for(var i = 0; i < params[key].length; i++){
+    for(var key in params) 
+    {
+        if(params.hasOwnProperty(key)) 
+        {
+            if( params[key] instanceof Array )
+            {
+                for(var i = 0; i < params[key].length; i++)
+                {
                     addField( key, params[key][i] )
                 }
             }
