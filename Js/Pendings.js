@@ -39,18 +39,20 @@ function Cargar(url,campo)
         }
     }
     xmlhttp.open("POST", url, true);
-    xmlhttp.send(); 
+    xmlhttp.send();  
 }
 function Llenar(idcard)
 {
-    console.log(idcard);
+//    console.log(document.getElementById("Titulo"+idcard).innerText);
+//    console.log("titulo"+idcard);
+    document.getElementById("pendingtitle").innerHTML="Editar Pendiente"
+    document.getElementById("Tituloform").value=document.getElementById("Titulo"+idcard).innerText+"";
+    document.getElementById("Empresa").value=document.getElementById("empresa"+idcard).innerText+"";
+    document.getElementById("descripcion").value=document.getElementById("descripcion"+idcard).innerText+"";
+    document.getElementById("pendingbtn").innerHTML="Editar";
+    document.getElementById("formedit").action="../Controlador/editPending.php"
 }
-function editar(idcard,contenido)
-{
-    arr ={"idcard": idcard,"contenido":contenido};
-    // Abrir modal de edicion
-    // post_to_url("../Controlador/editPending.php",arr,"POST")
-}
+
 function finalizar(idcard) 
 {
     arr ={"idcard": idcard};

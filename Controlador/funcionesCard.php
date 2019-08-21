@@ -1,5 +1,5 @@
 <?php
-function createCard($idcard,$idusuario,$titulo,$descripcion,$idapp)
+function createCard($idcard,$idusuario,$titulo,$descripcion,$idapp,$empresa)
 {
     // var_dump($idusuario);
     // var_dump($titulo);
@@ -17,6 +17,7 @@ function createCard($idcard,$idusuario,$titulo,$descripcion,$idapp)
     // $aux.='onClick="getCardInfo('.$idusuario.')">';
     $aux.='<div class="card-body"><h5 id="Titulo'.$idcard.'" class="card-title">'.$titulo.'</h5>';
     $aux.='<p id="descripcion'.$idcard.'" class="card-text">'.$descripcion.'</p>';
+    $aux.='<p id="empresa'.$idcard.'" class="card-text">#'.$empresa.'</p>';
     $aux.='<div class="d-flex justify-content-end">';
     $aux.='<button onclick="Llenar('.$idcard.')" data-toggle="modal" data-target="#editModal" class="btn st-btns"><img src="../imgs/edit.png" class="img-fluid btnIPen" alt="Agregar" /></button>';
     $aux.='<button onclick="finalizar('.$idcard.')"(type="button" class="btn btn-success">Finalizar</a></div></div></div>';

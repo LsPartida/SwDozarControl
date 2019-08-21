@@ -89,7 +89,7 @@ include "plantilla.php";
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header"><!--empieza header del modal-->
-        <h5 class="modal-title" id="exampleModalLabel">Agregar Nuevo Pendiente</h5>
+        <h5 class="modal-title" id="pendingtitle">Agregar Nuevo Pendiente</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -97,11 +97,11 @@ include "plantilla.php";
       <div class="modal-body"><!--empieza cuerpo del modal-->
         <div class="row">
           <div class="col">
-          <form action="../controlador/addPending.php" method="post">
+          <form id="formedit" method="post">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Titulo</label>
-                        <input type="Text" class="form-control" id="Titulo" placeholder="Titulo" name="Titulo">
+                        <input type="Text" class="form-control" id="Tituloform" placeholder="Titulo" name="Titulo">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputPassword4">Empresa</label>
@@ -114,7 +114,7 @@ include "plantilla.php";
                         <textarea class="form-control" id="descripcion" rows="3" name="descripcion"></textarea>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Agregar</button>
+                <button id="pendingbtn" type="submit" class="btn btn-primary">Agregar</button>
             </form>
           </div>
         </div>

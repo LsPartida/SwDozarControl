@@ -8,7 +8,7 @@ $cards="";
 foreach ($res as $row) 
 {
     // var_dump($row);
-    $cards.=createCard($row['IDPENDIENTE'],$row['IDUSUARIO'],$row['TITULO'],$row['DESCRIPCION'],$row['IDAPP']);
+    $cards.=createCard($row['IDPENDIENTE'],$row['IDUSUARIO'],$row['TITULO'],$row['DESCRIPCION'],$row['IDAPP'],$row['EMPRESA']);
     // var_dump($cards);
 }
 echo($cards);
