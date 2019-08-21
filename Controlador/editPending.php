@@ -1,11 +1,14 @@
 <?php
+$empresa=$_POST['Empresa'];
+$desc=$_POST['descripcion'];
+$titulo=$_POST['Titulo'];
+$idcard=$_POST['idcard'];
 $activePage="pendientes"; 
 require_once("../Modelo/Conector.php");
-$card=$_POST['idcard'];
-$condi=$_POST['cond'];
 // var_dump($card);
 $obj = new Conector;
 $obj->Connect();
-$obj->Editar("pendientes",$condi,"idpendiente=".$card);
+$sql="TITULO='".$titulo."',EMPRESA='".$empresa."',DESCRIPCION='".$desc."'";
+$obj->Editar("pendientesdetalle",$sql,"idpendiente=".$idcard);
 header("Location:../Vistas/pendientes.php");
 ?>

@@ -4,6 +4,7 @@ var id;
 function setTipo(tipo)
 {
     this.tipo=tipo;
+    console.log(this.tipo);
 }
 function getId(id)
 {
@@ -13,11 +14,21 @@ function getId(id)
 function setApp(app)
 {
     this.app=app;
+    form=document.getElementById("formedit");
+    var hiddenField = document.createElement("input");
+    hiddenField.setAttribute("type", "hidden");
+    hiddenField.setAttribute("name", "idapp");
+    hiddenField.setAttribute("value", this.app );
+    form.appendChild(hiddenField);
+    var hiddenField = document.createElement("input");
+    hiddenField.setAttribute("type", "hidden");
+    hiddenField.setAttribute("name", "tipo");
+    hiddenField.setAttribute("value", this.tipo );
+    form.appendChild(hiddenField);
+    form.action="../Controlador/addPending.php"
     
-    document.getElementById("ID").value=id;
-    document.getElementById("app").value=app;
-    document.getElementById("tipopend").value=tipo;
-    document.getElementById("form").submit();
+    
+    
     // post_to_url("../Controlador/addPending.php",campos,"POST");
 }
 function cargarPendientes(id)
@@ -47,9 +58,15 @@ function Llenar(idcard)
 //    console.log("titulo"+idcard);
     document.getElementById("pendingtitle").innerHTML="Editar Pendiente"
     document.getElementById("Tituloform").value=document.getElementById("Titulo"+idcard).innerText+"";
-    document.getElementById("Empresa").value=document.getElementById("empresa"+idcard).innerText+"";
+    document.getElementById("Empresa").value=(document.getElementById("empresa"+idcard).innerText+"").substr(1);
     document.getElementById("descripcion").value=document.getElementById("descripcion"+idcard).innerText+"";
     document.getElementById("pendingbtn").innerHTML="Editar";
+    form=document.getElementById("formedit");
+    var hiddenField = document.createElement("input");
+    hiddenField.setAttribute("type", "hidden");
+    hiddenField.setAttribute("name", "idcard");
+    hiddenField.setAttribute("value", idcard );
+    form.appendChild(hiddenField);
     document.getElementById("formedit").action="../Controlador/editPending.php"
 }
 

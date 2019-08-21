@@ -62,16 +62,16 @@ include "plantilla.php";
         </div>
         <div class="row d-flex">
           <div class="col-3">
-            <input type="image" src="../imgs/b1.png" class="modalbtn rounded" data-toggle="modal" data-target="#exampleMod" name="msiva" onclick="$('#exampleModal').modal('hide');"> 
+            <input type="image" onclick="setApp(1);" src="../imgs/b1.png" class="modalbtn rounded" data-toggle="modal" data-target="#editModal" name="msiva"> 
           </div>
           <div class="col-3">
-            <input type="image" onclick="setApp(2);" src="../imgs/b2.png" class="modalbtn rounded" name="erpdoz">
+            <input type="image" onclick="setApp(2);" src="../imgs/b2.png" class="modalbtn rounded" name="erpdoz" data-toggle="modal" data-target="#editModal">
           </div>
           <div class="col-3">
-            <input type="image" onclick="setApp(3);" src="../imgs/b3.png" class="modalbtn rounded" name="cfdilite">
+            <input type="image" onclick="setApp(3);" src="../imgs/b3.png" class="modalbtn rounded" name="cfdilite" data-toggle="modal" data-target="#editModal">
           </div>
           <div class="col-3">
-            <input type="image" onclick="setApp(4);" src="../imgs/b4.png" class="modalbtn rounded" name="otros">
+            <input type="image" onclick="setApp(4);" src="../imgs/b4.png" class="modalbtn rounded" name="otros" data-toggle="modal" data-target="#editModal">
           </div>
         </div>
       </div><!--Termina cuerpo del modal-->
@@ -125,13 +125,6 @@ include "plantilla.php";
 <!---------------------------------------------Modal----------------------------------------------->
     <script src="../Js/addPending.js"></script>
    <script src="../Js/Pendings.js"></script> 
-
-<form hidden action="../vistas/pendientedetalle.php" method="post" id="form">
-  <input type="text" name="ID" id="ID">
-  <input type="text" name="app" id="app">
-  <input type="text" name="tipo" id="tipopend">
-</form>
-   
 <?php include "final.php"; ?>
 
 

@@ -1,6 +1,23 @@
 <?php
 function createCard($idcard,$idusuario,$titulo,$descripcion,$idapp,$empresa)
 {
+    $app;
+    switch ($idapp)
+    {
+        case 1:
+            break;
+            $app="Masiva";
+        case 2:
+            $app="ErpDOZ";
+            break;
+        case 3:
+            $app="CFDiLite";
+            break;
+        case 4:
+            $app="Otros";
+            
+    }
+
     // var_dump($idusuario);
     // var_dump($titulo);
     // var_dump($descripcion);
@@ -17,7 +34,7 @@ function createCard($idcard,$idusuario,$titulo,$descripcion,$idapp,$empresa)
     // $aux.='onClick="getCardInfo('.$idusuario.')">';
     $aux.='<div class="card-body"><h5 id="Titulo'.$idcard.'" class="card-title">'.$titulo.'</h5>';
     $aux.='<p id="descripcion'.$idcard.'" class="card-text">'.$descripcion.'</p>';
-    $aux.='<p id="empresa'.$idcard.'" class="card-text">#'.$empresa.'</p>';
+    $aux.='<p id="empresa'.$idcard.'" class="card-text">#'.$empresa.'/'.$app.'</p>';
     $aux.='<div class="d-flex justify-content-end">';
     $aux.='<button onclick="Llenar('.$idcard.')" data-toggle="modal" data-target="#editModal" class="btn st-btns"><img src="../imgs/edit.png" class="img-fluid btnIPen" alt="Agregar" /></button>';
     $aux.='<button onclick="finalizar('.$idcard.')"(type="button" class="btn btn-success">Finalizar</a></div></div></div>';
