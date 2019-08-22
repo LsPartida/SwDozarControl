@@ -69,28 +69,40 @@ include "plantilla.php";
                 </button>
             </div><!--Termina header del modal-->
             <div class="modal-body"><!--empieza cuerpo del modal-->
-                <div class="row d-flex">
+            <form action="../Controlador/addUsu.php" method="POST" id="addusu">
+                <div class="row">
                     <div class="col-6">
-                        <label>Nombre de usuario:</label>
+                        <label for="">Nombre de usuario</label>
                     </div>
                     <div class="col-6">
-                        <label>Selecciona Derechos:</label>
+                        <input type="text" id="username" class="modalbtn rounded" name="name">
                     </div>
+                    <div class="col-6">
+                        <label for="">Contraseña</label>
+                    </div>
+                    <div class="col-6">
+                        <input type="password" class="modalbtn rounded" id="pass" name="pass">
+                    </div>
+                    <div class="col-6">
+                        <label for="">Confirmar contraseña</label>
+                    </div>
+                    <div class="col-6">
+                        <input type="password" class="modalbtn rounded" id="pass2">
+                    </div>
+                    <div class="col-6">
+                        <label >Tipo de derecho:</label>
+                    </div>
+                    <div class="col-6">
+                        <select id="derechos" class="modalbtn rounded" name="derechos" ></select>
+                    </div>
+                
                 </div>
-                <div class="row d-flex">
-                    <div class="col-6">
-                        <input type="text" class="modalbtn rounded" name="username">
-                    </div>
-                    <div class="col-6">
-                        <select id="derechos">
-                        </select>
-                    </div>
-                </div>
-            </div><!--Termina cuerpo del modal-->
             <div class="modal-footer"><!--empieza footer del modal-->
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary" onclick="nuevousu()">Agregar</button>
+                <button type="button" class="btn btn-primary" onclick="addUsu()">Agregar</button>
             </div>
+            </form>
+            </div><!--Termina cuerpo del modal-->
         </div>
     </div>
 </div>
@@ -187,5 +199,6 @@ include "plantilla.php";
     </div>
 </div>
 <!----------------------------------------Termina modal 3-------------------------------------------->
+
 <script src="../Js/mailbox.js"></script>
 <?php include "final.php" ?>
