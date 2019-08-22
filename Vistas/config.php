@@ -59,7 +59,7 @@ include "plantilla.php";
     </div>
 </div>
 <!-------------------------------------Modal #1 para Usuarios--------------------------------------------->
-<div class="modal" id="ModalAddUsu" tabindex="-1" role="dialog aria-labelledby="exampleModalLabel" aria-hidden="true"">
+<div class="modal" id="ModalAddUsu" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header"><!--empieza header del modal-->
@@ -79,28 +79,24 @@ include "plantilla.php";
                 </div>
                 <div class="row d-flex">
                     <div class="col-6">
-                        <input type="text" class="modalbtn rounded" name="cfdilite">
+                        <input type="text" class="modalbtn rounded" name="username">
                     </div>
                     <div class="col-6">
-                        <select>
-                            <option value="Op1">Op1</option>
-                            <option value="Op2">Op2</option>
-                            <option value="Op3">Op3</option>
-                            <option value="Op4">ESKEEEEELEEEERRR</option>
+                        <select id="derechos">
                         </select>
                     </div>
                 </div>
             </div><!--Termina cuerpo del modal-->
             <div class="modal-footer"><!--empieza footer del modal-->
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Agregar</button>
+                <button type="button" class="btn btn-primary" onclick="nuevousu()">Agregar</button>
             </div>
         </div>
     </div>
 </div>
 <!--------------------------------------------Termina modal 1------------------------------------------->
 <!------------------------------------------Modal #2 para Usuarios-------------------------------------->
-<div class="modal" id="ModalAddDer" tabindex="-1" role="dialog aria-labelledby="exampleModalLabel" aria-hidden="true"">
+<div class="modal" id="ModalAddDer" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header"><!--empieza header del modal-->
@@ -132,7 +128,7 @@ include "plantilla.php";
 </div>
 <!----------------------------------------Termina modal 2-------------------------------------------->
 <!-------------------------------------Modal #3 para Usuarios---------------------------------------->
-<div class="modal" id="ModalAddCuenta" tabindex="-1" role="dialog aria-labelledby="exampleModalLabel" aria-hidden="true"">
+<div class="modal" id="ModalAddCuenta" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header"><!--empieza header del modal-->
