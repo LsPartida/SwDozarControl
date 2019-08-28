@@ -11,9 +11,9 @@ function addData($data)
 {
         return "<td>".$data."</td>";
 }
-function addRow($cont)
+function addRow($cont,$id)
 {
-        return "<tr class='item' onClick='verDetalles(event);'><th scope='row'>".$cont."</th>";
+        return "<tr data-toggle='modal' data-target='#ModalAddUsu' class='item' onClick='verDetallesUsu(".$cont.");'><th scope='row'>".$cont."</th>";
 }
 function closeRow($cpo)
 {

@@ -13,7 +13,7 @@ if($res->rowCount()>0)
     foreach ($res as $row) 
         {       
                 $count++;
-                $der.=addRow($count);
+                $der.=addRow($count,$row['idtipoderecho']);
                 $der.=addData($row['tipoderecho']);
         }
         $der.=endTable();

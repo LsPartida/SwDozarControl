@@ -12,5 +12,6 @@ include "nav.php" ;
     <link rel="stylesheet" href="..\estilosnigas.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
     <title>Pendientes</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
   </head>
   <body>  
