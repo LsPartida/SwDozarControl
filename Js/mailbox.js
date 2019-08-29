@@ -1,5 +1,6 @@
-var datosusu="";
+var datosusu="",tiposderecho="";
 getJSON("../Controlador/getUsuarios.php",1);
+getJSON("../Controlador/prueba.php",2);
 function verDetallesUsu(id)
 {
 //Consultar info 
@@ -18,7 +19,15 @@ datosusu.forEach(el => {
 }
 function addUsu()
 {
-    
+    if(document.getElementById("username").value =="" || document.getElementById("pass").value==""|| DocumentFragment.getElementById("pass2").value=="")
+    {
+        Swal.fire({
+            type: 'error',
+            title: 'Error',
+            text: 'Datos vacios'
+          })
+        return;
+    }
     if(document.getElementById("pass").value != document.getElementById("pass2").value)
     {
         Swal.fire({
@@ -26,9 +35,10 @@ function addUsu()
             title: 'Error',
             text: 'Las contraseñas no coinciden'
           })
+          return;
     }
-    else
-    {
+    
+    
         var valor=document.getElementById("derechos").selectedIndex+1;
         while (document.getElementById("derechos").hasChildNodes()) 
         {
@@ -39,7 +49,7 @@ function addUsu()
         opt.value=valor;
         document.getElementById("derechos").appendChild(opt); 
         document.getElementById("addusu").submit();
-    }
+    
 
 }
 function setTitulo(titulo,cont)
@@ -49,7 +59,7 @@ function setTitulo(titulo,cont)
     {
         case 1:
             Cargar("../controlador/getusuariostable.php","contenido");
-            document.getElementById("boton").innerHTML='<button onclick=CargarS("../controlador/prueba.php","derechos"); data-toggle="modal" data-target="#ModalAddUsu"  class="btn st-btns"><img src="../imgs/mas.png" class="img-fluid smalladd" alt="Agregar" /></button>';
+            document.getElementById("boton").innerHTML='<button onclick=CargarS("derechos",1); data-toggle="modal" data-target="#ModalAddUsu"  class="btn st-btns"><img src="../imgs/mas.png" class="img-fluid smalladd" alt="Agregar" /></button>';
             break;
         case 2:
             Cargar("../controlador/getDerechos.php","contenido");
@@ -76,26 +86,35 @@ function getJSON(url,tipo)
                 case 1:
                     datosusu=datos;
                     break;
+                case 2:
+                    tiposderecho=datos;
+                    break;
             }
         }
     }
     xmlhttp.open("POST", url, true);
     xmlhttp.send(); 
 }
-function CargarS(url,campo) 
+function CargarS(campo,tipo) 
 {
     // console.log(campo);
     // console.log(document.getElementById(campo));
-    while (document.getElementById(campo).hasChildNodes()) {
-        document.getElementById(campo).removeChild(document.getElementById(campo).firstChild);
-     }
-    datos=getJSON(ruta);
-    datos.forEach(el => {
-        var opt = document.createElement('option');
-        opt.appendChild( document.createTextNode(el) );
-        opt.value = el-1; 
-        document.getElementById(campo).appendChild(opt); 
-    });
+    
+    switch (tipo)
+    {
+        case 1:
+                while (document.getElementById(campo).hasChildNodes()) {
+                    document.getElementById(campo).removeChild(document.getElementById(campo).firstChild);
+                 }
+                tiposderecho.forEach(el => {
+                    var opt = document.createElement('option');
+                    opt.appendChild( document.createTextNode(el) );
+                    opt.value = el-1; 
+                    document.getElementById(campo).appendChild(opt); 
+                });
+            break;
+    }
+    
 }
 function Cargar(url,campo) 
 {
@@ -114,3 +133,5 @@ function Cargar(url,campo)
 /********************************************************
  * *****************************************************
  * ******************************************** */
+
+ 

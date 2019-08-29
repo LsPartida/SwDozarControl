@@ -11,6 +11,5 @@ if($res->rowCount()>0)
             array_push($aux,$row['tipoderecho']);
         }
 }    
-// var_dump(json_encode($aux));
 echo (json_encode($aux));
 ?>
