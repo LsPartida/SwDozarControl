@@ -4,16 +4,16 @@ getJSON("../Controlador/prueba.php",2);
 function verDetallesUsu(id)
 {
 //Consultar info 
-datosusu.forEach(el => {
-    
-    if(id==el.IDUSUARIO)
+datosusu.forEach(el => 
     {
-        console.log("si");
-        document.getElementById("username").value=el.USUARIO;
-        document.getElementById("pass").value=el.USUARIO;
-        document.getElementById("pass2").value=el.USUARIO;
-    }
-    console.log("No");
+        if(id==el.IDUSUARIO)
+        {
+            document.getElementById("username").value=el.USUARIO;
+            document.getElementById("pass").value=el.USUARIO;
+            document.getElementById("pass2").value=el.USUARIO;
+            // getselect
+        }
+        
 });
 //mostar info        
 }
@@ -52,6 +52,7 @@ function addUsu()
     
 
 }
+
 function setTitulo(titulo,cont)
 {
     document.getElementById("Titulo").innerHTML=titulo;
@@ -130,8 +131,63 @@ function Cargar(url,campo)
     xmlhttp.open("POST", url, true);
     xmlhttp.send(); 
 }
-/********************************************************
- * *****************************************************
- * ******************************************** */
+function toJSON(params)
+{
+    return JSON.stringify(params);
+}
+function addder()
+{
+    // si todo sale bien
+    // arr ={"idcard": idcard};
+    tipoder=document.getElementById("tipoder").value
+    pend=document.getElementById("chkpend").checked
+    conf=document.getElementById("chkconf").checked
+    rep=document.getElementById("chkrep").checked
+    arr={"0":pend,"1":conf,"2":rep};
+    der=toJSON(arr)
+    datos={"tipoder": tipoder,}
+    datos.forEach(obj => {
+        console.log(obj)
+    });
+    
+    alert(datos);
+    // post_to_url("../Controlador/addDer.php",datos,"POST")
+}
+function post_to_url(path, params, method) 
+{
+    method = method || "post"; // Set method to post by default, if not specified.
 
- 
+    // The rest of this code assumes you are not using a library.
+    // It can be made less wordy if you use one.
+    var form = document.createElement("form");
+    form.setAttribute("method", method);
+    form.setAttribute("action", path);
+
+    var addField = function( key, value )
+    {
+        var hiddenField = document.createElement("input");
+        hiddenField.setAttribute("type", "hidden");
+        hiddenField.setAttribute("name", key);
+        hiddenField.setAttribute("value", value );
+        form.appendChild(hiddenField);
+    }; 
+    for(var key in params) 
+    {
+        if(params.hasOwnProperty(key)) 
+        {
+            if( params[key] instanceof Array )
+            {
+                for(var i = 0; i < params[key].length; i++)
+                {
+                    addField( key, params[key][i] )
+                }
+            }
+            else{
+                addField( key, params[key] ); 
+            }
+        }
+    }
+
+    document.body.appendChild(form);
+    form.submit();
+}
