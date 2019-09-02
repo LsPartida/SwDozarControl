@@ -131,10 +131,7 @@ function Cargar(url,campo)
     xmlhttp.open("POST", url, true);
     xmlhttp.send(); 
 }
-function toJSON(params)
-{
-    return JSON.stringify(params);
-}
+
 function addder()
 {
     // si todo sale bien
@@ -143,14 +140,14 @@ function addder()
     pend=document.getElementById("chkpend").checked
     conf=document.getElementById("chkconf").checked
     rep=document.getElementById("chkrep").checked
-    arr={"0":pend,"1":conf,"2":rep};
-    der=toJSON(arr)
-    datos={"tipoder": tipoder,}
+    arr={'0':pend,'1':conf,'2':rep};
+    der=JSON.stringify(arr);
+    datos={"tipoder": tipoder,"der":der}
     datos.forEach(obj => {
         console.log(obj)
     });
     
-    alert(datos);
+    // alert(datos);
     // post_to_url("../Controlador/addDer.php",datos,"POST")
 }
 function post_to_url(path, params, method) 

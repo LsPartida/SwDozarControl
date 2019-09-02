@@ -1,7 +1,6 @@
 <?php
 $varsession=$_SESSION['usuario'];
 $varidsession=$_SESSION['ID'];
-
 $pages = array();
 $obj = new Conector;
 $obj->Connect();
@@ -15,7 +14,7 @@ if (!isset($_SESSION['usuario']))
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-barra">
-  <a class="navbar-brand" href="https://www.swdozar.com">
+  <a class="navbar-brand" href="../index.php">
     <img src="../imgs/dozar logo.png" height="30" class="d-inline-block align-top" alt="">SwDozar
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,6 +25,7 @@ if (!isset($_SESSION['usuario']))
       <?php
         foreach($res as $row)
         {
+        
           echo('<a class="nav-link cambiar ');
           if(strtoupper($activePage)==$row['RUTA'])
           {
