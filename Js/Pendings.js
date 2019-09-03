@@ -56,9 +56,11 @@ function Llenar(idcard)
 {
 //    console.log(document.getElementById("Titulo"+idcard).innerText);
 //    console.log("titulo"+idcard);
+    var empresa=document.getElementById("empresa"+idcard)
     document.getElementById("pendingtitle").innerHTML="Editar Pendiente"
     document.getElementById("Tituloform").value=document.getElementById("Titulo"+idcard).innerText+"";
-    document.getElementById("Empresa").value=(document.getElementById("empresa"+idcard).innerText+"").substr(1);
+    document.getElementById("Empresa").value=(empresa.innerHTML+"").substr(1,(empresa.innerHTML+"").indexOf("/")-1);
+    console.log(empresa.innerHTML+"");
     document.getElementById("descripcion").value=document.getElementById("descripcion"+idcard).innerText+"";
     document.getElementById("pendingbtn").innerHTML="Editar";
     form=document.getElementById("formedit");

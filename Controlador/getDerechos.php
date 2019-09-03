@@ -15,6 +15,10 @@ if($res->rowCount()>0)
             $der.=addRow($count,2);
             $der.=addData($row['tipoderecho']);
             $count++;
+                $count++;
+                $der.=addRow($count,$row['idtipoderecho']);
+                $der.=addData($row['tipoderecho']);
+
         }
         $der.=endTable();
 }

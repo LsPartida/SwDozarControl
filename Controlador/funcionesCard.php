@@ -1,12 +1,12 @@
 <?php
 function createCard($idcard,$idusuario,$titulo,$descripcion,$idapp,$empresa)
 {
-    $app;
+    $app="";
     switch ($idapp)
     {
         case 1:
-            break;
             $app="Masiva";
+            break;
         case 2:
             $app="ErpDOZ";
             break;

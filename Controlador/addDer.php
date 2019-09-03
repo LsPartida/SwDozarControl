@@ -2,6 +2,7 @@
 require_once("../Modelo/Conector.php");
 $varidsession=$_SESSION['ID'];
 $tipo=$_POST['tipoder'];
+$activos=$_POST['der'];
 $obj = new Conector;
 $obj->Connect();
 $obj->Agregar('tipoderechos',null,"0,'".$tipo."',true,now(),now(),".$varidsession.",".$varidsession);

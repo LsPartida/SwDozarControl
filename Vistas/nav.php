@@ -1,7 +1,6 @@
 <?php
 $varsession=$_SESSION['usuario'];
 $varidsession=$_SESSION['ID'];
-
 $pages = array();
 $obj = new Conector;
 $obj->Connect();
@@ -13,6 +12,7 @@ if (!isset($_SESSION['usuario']))
     die();
   }
 ?>
+
 
 <nav class="navbar navbar-expand-md navbar-dark bg-barra">
   <a class="navbar-brand" href="https://www.swdozar.com">
@@ -26,6 +26,7 @@ if (!isset($_SESSION['usuario']))
       <?php
         foreach($res as $row)
         {
+        
           echo('<a class="nav-link cambiar ');
           if(strtoupper($activePage)==$row['RUTA'])
           {

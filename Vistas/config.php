@@ -69,28 +69,40 @@ include "plantilla.php";
                 </button>
             </div><!--Termina header del modal-->
             <div class="modal-body"><!--empieza cuerpo del modal-->
-                <div class="row d-flex">
+            <form action="../Controlador/addUsu.php" method="POST" id="addusu">
+                <div class="row">
                     <div class="col-6">
-                        <label>Nombre de usuario:</label>
+                        <label for="">Nombre de usuario</label>
                     </div>
                     <div class="col-6">
-                        <label>Selecciona Derechos:</label>
+                        <input type="text" id="username" class="modalbtn rounded" name="name">
                     </div>
+                    <div class="col-6">
+                        <label for="">Contraseña</label>
+                    </div>
+                    <div class="col-6">
+                        <input type="password" class="modalbtn rounded" id="pass" name="pass">
+                    </div>
+                    <div class="col-6">
+                        <label for="">Confirmar contraseña</label>
+                    </div>
+                    <div class="col-6">
+                        <input type="password" class="modalbtn rounded" id="pass2">
+                    </div>
+                    <div class="col-6">
+                        <label >Tipo de derecho:</label>
+                    </div>
+                    <div class="col-6">
+                        <select id="derechos" class="modalbtn rounded" name="derechos" ></select>
+                    </div>
+                
                 </div>
-                <div class="row d-flex">
-                    <div class="col-6">
-                        <input type="text" class="modalbtn rounded" name="username">
-                    </div>
-                    <div class="col-6">
-                        <select id="derechos">
-                        </select>
-                    </div>
-                </div>
-            </div><!--Termina cuerpo del modal-->
             <div class="modal-footer"><!--empieza footer del modal-->
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary" onclick="nuevousu()">Agregar</button>
+                <button type="button" class="btn btn-primary" onclick="addUsu()">Agregar</button>
             </div>
+            </form>
+            </div><!--Termina cuerpo del modal-->
         </div>
     </div>
 </div>
@@ -105,22 +117,51 @@ include "plantilla.php";
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div><!--Termina header del modal-->
-            <form action="../controlador/addDer.php" method="post">
+            <form>
             <div class="modal-body"><!--empieza cuerpo del modal-->
+            <div class="container">
                 <div class="row d-flex">
                     <div class="col-6">
                         <label>Nombre de derecho:</label>
                     </div>
-                </div>
-                <div class="row d-flex">
                     <div class="col-6">
-                        <input type="text" class="modalbtn rounded" name="tipoder">
+                        <input type="text" class="modalbtn rounded" id="tipoder">
                     </div>
                 </div>
+                <div class="row d-flex  mt-3">
+                    <div class="col-6">
+                        <h3>Permisos</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-5">
+                        Pendientes
+                    </div>
+                    <div class="col">
+                    <input type="checkbox" id="chkpend">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-5">
+                        Configuración
+                    </div>
+                    <div class="col">
+                    <input type="checkbox" id="chkconf">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-5">
+                        Reportes
+                    </div>
+                    <div class="col">
+                    <input type="checkbox" id="chkrep">
+                    </div>
+                </div>
+            </div>
             </div><!--Termina cuerpo del modal-->
             <div class="modal-footer"><!--empieza footer del modal-->
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                <button type="submit" class="btn btn-primary" submit>Agregar</button>
+                <button onclick="addder()" class="btn btn-primary">Agregar</button>
             </div>
             </form>
         </div>
