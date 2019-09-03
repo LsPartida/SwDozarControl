@@ -123,8 +123,6 @@ include "plantilla.php";
   </div>
 </div>
 <!---------------------------------------------Modal----------------------------------------------->
-    <script src="../Js/addPending.js"></script>
-   <script src="../Js/Pendings.js"></script> 
 <?php include "final.php"; ?>
 
 
