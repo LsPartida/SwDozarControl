@@ -14,7 +14,7 @@ if (!isset($_SESSION['usuario']))
   }
 ?>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-barra">
+<nav class="navbar navbar-expand-md navbar-dark bg-barra">
   <a class="navbar-brand" href="https://www.swdozar.com">
     <img src="../imgs/dozar logo.png" height="30" class="d-inline-block align-top" alt="">SwDozar
   </a>

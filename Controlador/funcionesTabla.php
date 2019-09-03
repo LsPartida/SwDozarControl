@@ -11,9 +11,9 @@ function addData($data)
 {
         return "<td>".$data."</td>";
 }
-function addRow($cont)
+function addRow($cont,$tipo)
 {
-        return "<tr class='item' onClick='verDetalles(event);'><th scope='row'>".$cont."</th>";
+        return "<tr class='item' onClick='verDetalles(".$cont.",".$tipo.");'><th scope='row'>".($cont+1)."</th>";
 }
 function closeRow($cpo)
 {

@@ -187,5 +187,5 @@ include "plantilla.php";
     </div>
 </div>
 <!----------------------------------------Termina modal 3-------------------------------------------->
-<script src="../Js/mailbox.js"></script>
+<script src="../Js/Configs.js"></script>
 <?php include "final.php" ?>
