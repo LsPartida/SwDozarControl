@@ -26,6 +26,19 @@ include "plantilla.php";
                     </div>
                 </div>
             </div>
+            <div class="box">
+                <div class="box-header" aria-expanded="true" data-toggle="collapse" data-target="#Solicitantes" onClick="$('#Solicitantes').collapse();">
+                    Solicitantes
+                </div>
+                <div class="collapse show" id="solicitantes">
+                    <div class="box-item" onClick="setTitulo('Tickets pendientes',4);">
+                        Añadir Solicitante 
+                    </div>
+                    <div class="box-item" onClick="setTitulo('Tickets pendientes',4);">
+                        
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- termina columna izq -->
         <!-- inicia columan inbox -->
@@ -39,21 +52,27 @@ include "plantilla.php";
             </div>
         </div>
         <!-- termina columnba inbox -->
+    
+
+    
+    <!-- Paginación -->
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </div>
     <!-- termina row -->
-    <!-- Paginación -->
     <div class="row">
-        <div class="col d-flex justify-content-center">
-            <nav aria-label="Page navigation example">
-                <ul class="pagination">
-                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                </ul>
-            </nav>
-        </div>
+    
     </div>
 </div>
 <!-- termina container -->
